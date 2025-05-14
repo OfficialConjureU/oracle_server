@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
-const qs = require('qs'); // Correctly using qs for form data
+const qs = require('qs'); // Correct qs usage
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -17,7 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/.well-known', express.static(path.join(__dirname, '.well-known')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// =======================
 // Test Root
+// =======================
 app.get('/', (req, res) => {
   res.send('Oracle Relay Server Active.');
 });
@@ -25,7 +27,6 @@ app.get('/', (req, res) => {
 // =======================
 // COURSES (form-encoded)
 // =======================
-
 app.post('/create_course', async (req, res) => {
   const { fullname, shortname, categoryid, startdate, enddate, visible } = req.body;
   try {
@@ -47,19 +48,17 @@ app.post('/create_course', async (req, res) => {
     );
     res.json(moodleResponse.data);
   } catch (error) {
+    console.error('Error creating course:', error.response?.data || error.message);
     res.status(500).json({ error: error.response?.data || error.message });
   }
 });
 
 // =======================
-// USERS (application/json)
+// USERS (form-encoded)
 // =======================
-
 app.post('/create_user', async (req, res) => {
   const { firstname, lastname, email, username, password } = req.body;
-
   try {
-    // Create user directly inside Moodle (NO Oracle-only holding)
     const moodleResponse = await axios.post(
       MOODLE_URL,
       qs.stringify({
@@ -78,19 +77,16 @@ app.post('/create_user', async (req, res) => {
       }),
       { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
     );
-
-    console.log('Moodle API Response:', moodleResponse.data);
     res.json({ message: 'User created directly in Moodle.', moodleResponse: moodleResponse.data });
-
   } catch (error) {
-    console.error('Error forwarding to Moodle:', error.response?.data || error.message);
+    console.error('Error creating user:', error.response?.data || error.message);
     res.status(500).json({ message: 'Failed to create user in Moodle.', error: error.response?.data || error.message });
   }
 });
+
 // =======================
 // GROUPS (application/json)
 // =======================
-
 app.post('/create_group', async (req, res) => {
   const { courseid, name, description } = req.body;
   try {
@@ -98,17 +94,14 @@ app.post('/create_group', async (req, res) => {
       `${MOODLE_URL}?wstoken=${MOODLE_TOKEN}&wsfunction=core_group_create_groups&moodlewsrestformat=json`,
       {
         groups: [
-          {
-            courseid,
-            name,
-            description
-          }
+          { courseid, name, description }
         ]
       },
       { headers: { 'Content-Type': 'application/json' } }
     );
     res.json(moodleResponse.data);
   } catch (error) {
+    console.error('Error creating group:', error.response?.data || error.message);
     res.status(500).json({ error: error.response?.data || error.message });
   }
 });
@@ -120,16 +113,14 @@ app.post('/add_user_to_group', async (req, res) => {
       `${MOODLE_URL}?wstoken=${MOODLE_TOKEN}&wsfunction=core_group_add_group_members&moodlewsrestformat=json`,
       {
         members: [
-          {
-            groupid,
-            userid
-          }
+          { groupid, userid }
         ]
       },
       { headers: { 'Content-Type': 'application/json' } }
     );
     res.json(moodleResponse.data);
   } catch (error) {
+    console.error('Error adding user to group:', error.response?.data || error.message);
     res.status(500).json({ error: error.response?.data || error.message });
   }
 });
@@ -137,7 +128,6 @@ app.post('/add_user_to_group', async (req, res) => {
 // =======================
 // COHORTS (application/json)
 // =======================
-
 app.post('/create_cohort', async (req, res) => {
   const { name, description, categoryid } = req.body;
   try {
@@ -145,18 +135,14 @@ app.post('/create_cohort', async (req, res) => {
       `${MOODLE_URL}?wstoken=${MOODLE_TOKEN}&wsfunction=core_cohort_create_cohorts&moodlewsrestformat=json`,
       {
         cohorts: [
-          {
-            name,
-            description,
-            categorytype: 'id',
-            categoryid
-          }
+          { name, description, categorytype: 'id', categoryid }
         ]
       },
       { headers: { 'Content-Type': 'application/json' } }
     );
     res.json(moodleResponse.data);
   } catch (error) {
+    console.error('Error creating cohort:', error.response?.data || error.message);
     res.status(500).json({ error: error.response?.data || error.message });
   }
 });
@@ -168,16 +154,14 @@ app.post('/add_user_to_cohort', async (req, res) => {
       `${MOODLE_URL}?wstoken=${MOODLE_TOKEN}&wsfunction=core_cohort_add_cohort_members&moodlewsrestformat=json`,
       {
         members: [
-          {
-            cohortid,
-            userid
-          }
+          { cohortid, userid }
         ]
       },
       { headers: { 'Content-Type': 'application/json' } }
     );
     res.json(moodleResponse.data);
   } catch (error) {
+    console.error('Error adding user to cohort:', error.response?.data || error.message);
     res.status(500).json({ error: error.response?.data || error.message });
   }
 });
@@ -185,7 +169,6 @@ app.post('/add_user_to_cohort', async (req, res) => {
 // =======================
 // ASSIGNMENTS (application/json)
 // =======================
-
 app.post('/create_assignment', async (req, res) => {
   const { courseid, name, description, duedate } = req.body;
   try {
@@ -193,18 +176,14 @@ app.post('/create_assignment', async (req, res) => {
       `${MOODLE_URL}?wstoken=${MOODLE_TOKEN}&wsfunction=mod_assign_create_assignments&moodlewsrestformat=json`,
       {
         assignments: [
-          {
-            courseid,
-            name,
-            intro: description,
-            duedate
-          }
+          { courseid, name, intro: description, duedate }
         ]
       },
       { headers: { 'Content-Type': 'application/json' } }
     );
     res.json(moodleResponse.data);
   } catch (error) {
+    console.error('Error creating assignment:', error.response?.data || error.message);
     res.status(500).json({ error: error.response?.data || error.message });
   }
 });
@@ -212,7 +191,6 @@ app.post('/create_assignment', async (req, res) => {
 // =======================
 // MESSAGING (form-encoded)
 // =======================
-
 app.post('/send_message', async (req, res) => {
   const { touserid, text } = req.body;
   try {
@@ -230,6 +208,7 @@ app.post('/send_message', async (req, res) => {
     );
     res.json(moodleResponse.data);
   } catch (error) {
+    console.error('Error sending message:', error.response?.data || error.message);
     res.status(500).json({ error: error.response?.data || error.message });
   }
 });
@@ -237,7 +216,6 @@ app.post('/send_message', async (req, res) => {
 // =======================
 // SYSTEM MONITORING
 // =======================
-
 app.get('/get_server_status', (req, res) => {
   res.json({ status: "Oracle Server Online." });
 });
@@ -257,9 +235,8 @@ app.post('/trigger_manual_backup', (req, res) => {
 });
 
 // =======================
-// Start App
+// Start Server
 // =======================
-
 app.listen(PORT, () => {
   console.log(`Oracle Relay listening on port ${PORT}`);
 });
