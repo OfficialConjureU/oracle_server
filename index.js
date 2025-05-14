@@ -2,6 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const path = require('path');
 const qs = require('qs'); // Correct qs usage
+const moodleFunctions = require('./moodle_functions_fixed.json');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -233,7 +234,65 @@ app.get('/monitor_server_load', (req, res) => {
 app.post('/trigger_manual_backup', (req, res) => {
   res.json({ message: "Manual backup trigger not implemented yet." });
 });
+// =======================
+// ORACLE SMART COMMAND (reads csv/json to auto-post)
+// =======================
+app.post('/oracle_command', async (req, res) => {
+  const { command, parameters } = req.body;
 
+  try {
+    if (!command) {
+      return res.status(400).json({ error: 'Missing command.' });
+    }
+
+    // Find function info from the moodleFunctions list
+    const matchedFunction = moodleFunctions.find(func => func.function_name.toLowerCase() === command.toLowerCase());
+
+    if (!matchedFunction) {
+      return res.status(404).json({ error: 'Command not found in Oracle function database.' });
+    }
+
+    const { function_name, method, format } = matchedFunction;
+
+    let payload = {
+      wstoken: MOODLE_TOKEN,
+      wsfunction: function_name,
+      moodlewsrestformat: 'json'
+    };
+
+    // Merge user-provided parameters into payload
+    if (format === 'form-encoded') {
+      // For form-encoded functions (like creating users/courses/messages)
+      Object.keys(parameters).forEach((key) => {
+        payload[key] = parameters[key];
+      });
+    } else {
+      // For application/json functions (like groups, cohorts, assignments)
+      payload = {
+        ...payload,
+        ...parameters
+      };
+    }
+
+    const axiosConfig = {
+      headers: {
+        'Content-Type': format === 'form-encoded' ? 'application/x-www-form-urlencoded' : 'application/json'
+      }
+    };
+
+    const moodleResponse = await axios.post(
+      MOODLE_URL,
+      format === 'form-encoded' ? qs.stringify(payload) : payload,
+      axiosConfig
+    );
+
+    res.json({ message: `Command ${function_name} executed successfully.`, moodleResponse: moodleResponse.data });
+
+  } catch (error) {
+    console.error('Oracle command error:', error.response?.data || error.message);
+    res.status(500).json({ error: error.response?.data || error.message });
+  }
+});
 // =======================
 // Start Server
 // =======================
