@@ -1,0 +1,2944 @@
+{
+  "functions": [
+    {
+      "function_name": "core_user_search_identity",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "auth_email_get_signup_settings",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "auth_email_signup_user",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "block_recentlyaccesseditems_get_recent_items",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "block_starredcourses_get_starred_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_create_userfeedback_action_record",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_auth_confirm_user",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_auth_is_age_digital_consent_verification_enabled",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_auth_is_minor",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_auth_request_password_reset",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_auth_resend_confirmation_email",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_backup_get_async_backup_links_backup",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_backup_get_async_backup_links_restore",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_backup_get_async_backup_progress",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_backup_get_copy_progress",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_backup_submit_copy_form",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_badges_get_user_badges",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_block_get_course_blocks",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_block_get_dashboard_blocks",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_block_fetch_addable_blocks",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_blog_get_entries",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_blog_view_entries",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_create_calendar_events",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_delete_calendar_events",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_get_action_events_by_course",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_get_action_events_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_get_action_events_by_timesort",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_get_allowed_event_types",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_get_calendar_access_information",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_get_calendar_day_view",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_get_calendar_event_by_id",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_get_calendar_events",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_get_calendar_monthly_view",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_get_calendar_upcoming_view",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_get_timestamps",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_submit_create_update_form",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_update_event_start_day",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_calendar_get_calendar_export_token",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_cohort_add_cohort_members",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_cohort_create_cohorts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_cohort_delete_cohort_members",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_cohort_delete_cohorts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_cohort_get_cohort_members",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_cohort_get_cohorts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_cohort_search_cohorts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_cohort_update_cohorts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_comment_add_comments",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_comment_delete_comments",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_comment_get_comments",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_add_competency_to_course",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_add_competency_to_plan",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_add_competency_to_template",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_add_related_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_approve_plan",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_competency_framework_viewed",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_competency_viewed",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_complete_plan",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_count_competencies",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_count_competencies_in_course",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_count_competencies_in_template",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_count_competency_frameworks",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_count_course_module_competencies",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_count_courses_using_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_count_templates",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_count_templates_using_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_create_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_create_competency_framework",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_create_plan",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_create_template",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_create_user_evidence_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_delete_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_delete_competency_framework",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_delete_evidence",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_delete_plan",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_delete_template",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_delete_user_evidence",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_delete_user_evidence_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_duplicate_competency_framework",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_duplicate_template",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_get_scale_values",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_grade_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_grade_competency_in_course",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_grade_competency_in_plan",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_list_competencies",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_list_competencies_in_template",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_list_competency_frameworks",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_list_course_competencies",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_list_course_module_competencies",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_list_plan_competencies",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_list_templates",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_list_templates_using_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_list_user_plans",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_move_down_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_move_up_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_plan_cancel_review_request",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_plan_request_review",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_plan_start_review",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_plan_stop_review",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_read_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_read_competency_framework",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_read_plan",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_read_template",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_read_user_evidence",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_remove_competency_from_course",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_remove_competency_from_plan",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_remove_competency_from_template",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_remove_related_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_reopen_plan",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_reorder_course_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_reorder_plan_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_reorder_template_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_request_review_of_user_evidence_linked_competencies",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_search_competencies",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_set_course_competency_ruleoutcome",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_set_parent_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_template_has_related_data",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_template_viewed",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_unapprove_plan",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_unlink_plan_from_template",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_update_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_update_competency_framework",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_update_course_competency_settings",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_update_plan",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_update_template",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_user_competency_cancel_review_request",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_user_competency_plan_viewed",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_user_competency_request_review",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_user_competency_start_review",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_user_competency_stop_review",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_user_competency_viewed",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_user_competency_viewed_in_course",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_competency_user_competency_viewed_in_plan",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_completion_get_activities_completion_status",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_completion_get_course_completion_status",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_completion_mark_course_self_completed",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_completion_override_activity_completion_status",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_completion_update_activity_completion_status_manually",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_contentbank_delete_content",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_contentbank_rename_content",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_contentbank_set_content_visibility",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_add_content_item_to_user_favourites",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_check_updates",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_create_categories",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_create_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_delete_categories",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_delete_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_delete_modules",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_duplicate_course",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_edit_module",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_edit_section",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_activities_overview",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_activity_chooser_footer",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_categories",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_contents",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_course_content_items",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_course_module",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_course_module_by_instance",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_courses_by_field",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_enrolled_courses_by_timeline_classification",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_enrolled_users_by_cmid",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_module",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_recent_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_updates_since",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_user_administration_options",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_get_user_navigation_options",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_import_course",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_remove_content_item_from_user_favourites",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_search_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_set_favourite_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_toggle_activity_recommendation",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_update_categories",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_update_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_course_view_course",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_customfield_create_category",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_customfield_delete_category",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_customfield_delete_field",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_customfield_move_category",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_customfield_move_field",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_customfield_reload_template",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_enrol_edit_user_enrolment",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_enrol_get_course_enrolment_methods",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_enrol_get_enrolled_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_enrol_get_enrolled_users_with_capability",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_enrol_get_potential_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_enrol_get_users_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_enrol_search_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_enrol_submit_user_enrolment_form",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_enrol_unenrol_user_enrolment",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_fetch_notifications",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_files_get_files",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_files_upload",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_files_delete_draft_files",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_files_get_unused_draft_itemid",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_filters_get_available_in_context",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_form_get_filetypes_browser_data",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_form_dynamic_form",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_get_component_strings",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_get_fragment",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_get_string",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_get_strings",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_get_user_dates",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_grade_update_grades",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_grades_create_gradecategory",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_grades_get_grades",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_grades_grader_gradingpanel_point_fetch",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_grades_grader_gradingpanel_point_store",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_grades_grader_gradingpanel_scale_fetch",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_grades_grader_gradingpanel_scale_store",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_grades_create_gradecategories",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_grading_get_definitions",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_grading_get_gradingform_instances",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_grading_save_definitions",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_add_group_members",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_assign_grouping",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_create_groupings",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_create_groups",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_delete_group_members",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_delete_groupings",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_delete_groups",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_get_activity_allowed_groups",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_get_activity_groupmode",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_get_course_groupings",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_get_course_groups",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_get_course_user_groups",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_get_group_members",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_get_groupings",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_get_groups",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_unassign_grouping",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_update_groupings",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_group_update_groups",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_h5p_get_trusted_h5p_file",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_block_contacts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_block_user",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_confirm_contact_request",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_create_contact_request",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_create_contacts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_data_for_messagearea_contacts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_data_for_messagearea_conversations",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_data_for_messagearea_get_most_recent_message",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_data_for_messagearea_get_profile",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_data_for_messagearea_messages",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_data_for_messagearea_search_messages",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_data_for_messagearea_search_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_data_for_messagearea_search_users_in_course",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_decline_contact_request",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_delete_contacts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_delete_conversation",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_delete_conversations_by_id",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_delete_message",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_delete_message_for_all_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_blocked_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_contact_requests",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_contacts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_conversation",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_conversation_between_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_conversation_counts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_conversation_members",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_conversation_messages",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_conversations",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_member_info",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_message_processor",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_messages",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_received_contact_requests_count",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_self_conversation",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_unread_conversations_count",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_user_contacts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_user_message_preferences",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_get_user_notification_preferences",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_mark_all_conversation_messages_as_read",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_mark_all_messages_as_read",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_mark_all_notifications_as_read",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_mark_message_read",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_mark_notification_read",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_message_processor_config_form",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_message_search_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_mute_conversations",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_search_contacts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_send_instant_messages",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_send_messages_to_conversation",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_set_favourite_conversations",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_unblock_contacts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_unblock_user",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_unmute_conversations",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_message_unset_favourite_conversations",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_notes_create_notes",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_notes_delete_notes",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_notes_get_course_notes",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_notes_get_notes",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_notes_update_notes",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_notes_view_notes",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_output_load_fontawesome_icon_map",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_output_load_template",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_payment_get_available_gateways",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_question_get_random_question_summaries",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_question_submit_tags_form",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_question_update_flag",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_rating_add_rating",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_rating_get_item_ratings",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_role_assign_roles",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_role_unassign_roles",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_search_get_relevant_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_session_time_remaining",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_session_touch",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_table_get_dynamic_table_content",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_tag_get_tag_areas",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_tag_get_tag_cloud",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_tag_get_tag_collections",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_tag_get_tagindex",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_tag_get_tagindex_per_area",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_tag_get_tags",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_tag_update_tags",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_update_inplace_editable",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_add_user_device",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_add_user_private_files",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_agree_site_policy",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_create_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_delete_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_get_course_user_profiles",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_get_private_files_info",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_get_user_preferences",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_get_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_get_users_by_field",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_get_users_by_id",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_remove_user_device",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_set_user_preferences",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_update_picture",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_update_user_preferences",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_update_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_view_user_list",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_user_view_user_profile",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_webservice_get_site_info",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "core_xapi_statement_post",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "enrol_guest_get_instance_info",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "enrol_manual_enrol_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "enrol_manual_unenrol_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "enrol_self_enrol_user",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "enrol_self_get_instance_info",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "gradereport_overview_get_course_grades",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "gradereport_overview_view_grade_report",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "gradereport_user_get_grade_items",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "gradereport_user_get_grades_table",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "gradereport_user_view_grade_report",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "gradingform_guide_grader_gradingpanel_fetch",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "gradingform_guide_grader_gradingpanel_store",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "gradingform_rubric_grader_gradingpanel_fetch",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "gradingform_rubric_grader_gradingpanel_store",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "local_mobile_get_plugin_settings",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "message_airnotifier_are_notification_preferences_configured",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "message_airnotifier_enable_device",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "message_airnotifier_get_user_devices",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "message_airnotifier_is_system_configured",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "message_popup_get_popup_notifications",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "message_popup_get_unread_popup_notification_count",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_copy_previous_attempt",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_get_assignments",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_get_grades",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_get_participant",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_get_submission_status",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_get_submissions",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_get_user_flags",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_get_user_mappings",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_list_participants",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_lock_submissions",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_reveal_identities",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_revert_submissions_to_draft",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_save_grade",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_save_grades",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_save_submission",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_save_user_extensions",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_set_user_flags",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_submit_for_grading",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_submit_grading_form",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_unlock_submissions",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_view_assign",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_view_grading_table",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_assign_view_submission_status",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_book_get_books_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_book_view_book",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_chat_get_chat_latest_messages",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_chat_get_chat_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_chat_get_chats_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_chat_get_session_messages",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_chat_get_sessions",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_chat_login_user",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_chat_send_chat_message",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_chat_view_chat",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_choice_delete_choice_responses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_choice_get_choice_options",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_choice_get_choice_results",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_choice_get_choices_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_choice_submit_choice_response",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_choice_view_choice",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_data_add_entry",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_data_approve_entry",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_data_delete_entry",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_data_get_data_access_information",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_data_get_databases_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_data_get_entries",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_data_get_entry",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_data_get_fields",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_data_search_entries",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_data_update_entry",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_data_view_database",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_feedback_get_analysis",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_feedback_get_current_completed_tmp",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_feedback_get_feedback_access_information",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_feedback_get_feedbacks_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_feedback_get_finished_responses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_feedback_get_items",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_feedback_get_last_completed",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_feedback_get_non_respondents",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_feedback_get_page_items",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_feedback_get_responses_analysis",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_feedback_get_unfinished_responses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_feedback_launch_feedback",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_feedback_process_page",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_feedback_view_feedback",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_folder_get_folders_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_folder_view_folder",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_add_discussion",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_add_discussion_post",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_can_add_discussion",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_delete_post",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_get_discussion_post",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_get_discussion_posts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_get_discussion_posts_by_userid",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_get_forum_access_information",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_get_forum_discussion_posts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_get_forum_discussions",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_get_forum_discussions_paginated",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_get_forums_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_prepare_draft_area_for_post",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_set_lock_state",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_set_pin_state",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_set_subscription_state",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_toggle_favourite_state",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_update_discussion_post",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_view_forum",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_forum_view_forum_discussion",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_glossary_add_entry",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_glossary_get_authors",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_glossary_get_categories",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_glossary_get_entries_by_author",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_glossary_get_entries_by_author_id",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_glossary_get_entries_by_category",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_glossary_get_entries_by_date",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_glossary_get_entries_by_letter",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_glossary_get_entries_by_search",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_glossary_get_entries_by_term",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_glossary_get_entries_to_approve",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_glossary_get_entry_by_id",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_glossary_get_glossaries_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_glossary_view_entry",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_glossary_view_glossary",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_imscp_get_imscps_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_imscp_view_imscp",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_label_get_labels_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_finish_attempt",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_get_attempts_overview",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_get_content_pages_viewed",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_get_lesson",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_get_lesson_access_information",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_get_lessons_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_get_page_data",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_get_pages",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_get_pages_possible_jumps",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_get_questions_attempts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_get_user_attempt",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_get_user_attempt_grade",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_get_user_grade",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_get_user_timers",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_launch_attempt",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_process_page",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lesson_view_lesson",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lti_create_tool_proxy",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lti_create_tool_type",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lti_delete_tool_proxy",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lti_delete_tool_type",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lti_get_ltis_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lti_get_tool_launch_data",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lti_get_tool_proxies",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lti_get_tool_proxy_registration_request",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lti_get_tool_types",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lti_is_cartridge",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lti_update_tool_type",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_lti_view_lti",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_page_get_pages_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_page_view_page",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_get_attempt_access_information",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_get_attempt_data",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_get_attempt_review",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_get_attempt_summary",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_get_combined_review_options",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_get_quiz_access_information",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_get_quiz_feedback_for_grade",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_get_quiz_required_qtypes",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_get_quizzes_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_get_user_attempts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_get_user_best_grade",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_process_attempt",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_save_attempt",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_start_attempt",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_view_attempt",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_view_attempt_review",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_view_attempt_summary",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_quiz_view_quiz",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_resource_get_resources_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_resource_view_resource",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_scorm_get_scorm_access_information",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_scorm_get_scorm_attempt_count",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_scorm_get_scorm_sco_tracks",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_scorm_get_scorm_scoes",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_scorm_get_scorm_user_data",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_scorm_get_scorms_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_scorm_insert_scorm_tracks",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_scorm_launch_sco",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_scorm_view_scorm",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_survey_get_questions",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_survey_get_surveys_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_survey_submit_answers",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_survey_view_survey",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_url_get_urls_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_url_view_url",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_wiki_edit_page",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_wiki_get_page_contents",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_wiki_get_page_for_editing",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_wiki_get_subwiki_files",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_wiki_get_subwiki_pages",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_wiki_get_subwikis",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_wiki_get_wikis_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_wiki_new_page",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_wiki_view_page",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_wiki_view_wiki",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_add_submission",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_delete_submission",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_evaluate_assessment",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_evaluate_submission",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_get_assessment",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_get_assessment_form_definition",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_get_grades",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_get_grades_report",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_get_reviewer_assessments",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_get_submission",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_get_submission_assessments",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_get_submissions",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_get_user_plan",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_get_workshop_access_information",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_get_workshops_by_courses",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_update_assessment",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_update_submission",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_view_submission",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "mod_workshop_view_workshop",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "report_competency_data_for_report",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "report_insights_action_executed",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "report_insights_set_fixed_prediction",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "report_insights_set_notuseful_prediction",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_analytics_potential_contexts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_data_for_competencies_manage_page",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_data_for_competency_frameworks_manage_page",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_data_for_competency_summary",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_data_for_course_competencies_page",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_data_for_plan_page",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_data_for_plans_page",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_data_for_related_competencies_section",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_data_for_template_competencies_page",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_data_for_templates_manage_page",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_data_for_user_competency_summary",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_data_for_user_competency_summary_in_course",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_data_for_user_competency_summary_in_plan",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_data_for_user_evidence_list_page",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_data_for_user_evidence_page",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_list_courses_using_competency",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_search_cohorts",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_lp_search_users",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_mobile_call_external_functions",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_mobile_get_autologin_key",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_mobile_get_config",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_mobile_get_content",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_mobile_get_plugins_supporting_mobile",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_mobile_get_public_config",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_templatelibrary_list_templates",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_templatelibrary_load_canonical_template",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_usertours_complete_tour",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_usertours_fetch_and_start_tour",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_usertours_reset_tour",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_usertours_step_shown",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    },
+    {
+      "function_name": "tool_xmldb_invoke_move_action",
+      "description": "Auto-mapped from Master API List",
+      "post_style": "auto"
+    }
+  ]
+}
