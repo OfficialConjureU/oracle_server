@@ -57,29 +57,35 @@ app.post('/create_course', async (req, res) => {
 
 app.post('/create_user', async (req, res) => {
   const { firstname, lastname, email, username, password } = req.body;
+
   try {
     const moodleResponse = await axios.post(
-      `${MOODLE_URL}?wstoken=${MOODLE_TOKEN}&wsfunction=core_user_create_users&moodlewsrestformat=json`,
+      MOODLE_URL,
+      qs.stringify({
+        wstoken: MOODLE_TOKEN,
+        wsfunction: 'core_user_create_users',
+        moodlewsrestformat: 'json',
+        'users[0][username]': username,
+        'users[0][password]': password,
+        'users[0][firstname]': firstname,
+        'users[0][lastname]': lastname,
+        'users[0][email]': email,
+        'users[0][auth]': 'manual',
+        'users[0][lang]': 'en',
+        'users[0][timezone]': 'America/Chicago',
+        'users[0][maildisplay]': 1
+      }),
       {
-        users: [
-          {
-            username,
-            password,
-            firstname,
-            lastname,
-            email,
-            auth: "manual",
-            lang: "en",
-            timezone: "America/Chicago",
-            maildisplay: 1
-          }
-        ]
-      },
-      { headers: { 'Content-Type': 'application/json' } }
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      }
     );
-    res.json(moodleResponse.data);
+
+    console.log('Moodle API Response:', moodleResponse.data);
+    res.json({ message: 'User creation relayed successfully.', moodleResponse: moodleResponse.data });
+
   } catch (error) {
-    res.status(500).json({ error: error.response?.data || error.message });
+    console.error('Error forwarding to Moodle:', error.response?.data || error.message);
+    res.status(500).json({ message: 'Failed to create user via Moodle.', error: error.response?.data || error.message });
   }
 });
 
