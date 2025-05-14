@@ -59,10 +59,7 @@ app.post('/create_user', async (req, res) => {
   const { firstname, lastname, email, username, password } = req.body;
 
   try {
-    // 1. Save to Oracle System (confirm receipt)
-    console.log(`Creating user inside Oracle system: ${firstname} ${lastname}`);
-
-    // 2. Immediately POST to Moodle API (core_user_create_users)
+    // Create user directly inside Moodle (NO Oracle-only holding)
     const moodleResponse = await axios.post(
       MOODLE_URL,
       qs.stringify({
@@ -74,30 +71,20 @@ app.post('/create_user', async (req, res) => {
         'users[0][firstname]': firstname,
         'users[0][lastname]': lastname,
         'users[0][email]': email,
-        'users[0][auth]': 'manual', // Manual account creation
+        'users[0][auth]': 'manual',
         'users[0][lang]': 'en',
         'users[0][timezone]': 'America/Chicago',
         'users[0][maildisplay]': 1
       }),
-      {
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-      }
+      { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
     );
 
-    console.log('Moodle API User Creation Response:', moodleResponse.data);
-
-    // 3. Send final success report
-    res.json({ 
-      message: 'User creation relayed successfully to Oracle and Moodle.',
-      moodleResponse: moodleResponse.data
-    });
+    console.log('Moodle API Response:', moodleResponse.data);
+    res.json({ message: 'User created directly in Moodle.', moodleResponse: moodleResponse.data });
 
   } catch (error) {
-    console.error('Error forwarding user to Moodle:', error.response?.data || error.message);
-    res.status(500).json({ 
-      message: 'Failed to create user via Moodle after Oracle save.',
-      error: error.response?.data || error.message
-    });
+    console.error('Error forwarding to Moodle:', error.response?.data || error.message);
+    res.status(500).json({ message: 'Failed to create user in Moodle.', error: error.response?.data || error.message });
   }
 });
 // =======================
