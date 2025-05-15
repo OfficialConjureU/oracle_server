@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 });
 
 // =======================
-// Oracle Smart Command
+// Oracle Universal Smart Command
 // =======================
 app.post('/oracle_command', async (req, res) => {
   const { command, parameters } = req.body;
@@ -36,14 +36,16 @@ app.post('/oracle_command', async (req, res) => {
       return res.status(400).json({ error: 'Missing command.' });
     }
 
+    // Find function info from moodleFunctions
     const matchedFunction = moodleFunctions.find(func => func.function_name.toLowerCase() === command.toLowerCase());
 
     if (!matchedFunction) {
-      return res.status(404).json({ error: 'Command not found in Oracle function database.' });
+      return res.status(404).json({ error: `Command ${command} not found in Oracle database.` });
     }
 
-    const { function_name, method, format } = matchedFunction;
+    const { function_name, format } = matchedFunction;
 
+    // Prepare payload
     let payload = {
       wstoken: MOODLE_TOKEN,
       wsfunction: function_name,
@@ -61,19 +63,17 @@ app.post('/oracle_command', async (req, res) => {
       };
     }
 
-    const axiosConfig = {
-      headers: {
-        'Content-Type': format === 'form-encoded' ? 'application/x-www-form-urlencoded' : 'application/json'
-      }
+    const headers = {
+      'Content-Type': format === 'form-encoded' ? 'application/x-www-form-urlencoded' : 'application/json'
     };
 
     const moodleResponse = await axios.post(
       MOODLE_URL,
       format === 'form-encoded' ? qs.stringify(payload) : payload,
-      axiosConfig
+      { headers }
     );
 
-    res.json({ message: `✅ Command ${function_name} executed successfully in Moodle.`, moodleResponse: moodleResponse.data });
+    res.json({ message: `✅ Command ${function_name} executed successfully.`, moodleResponse: moodleResponse.data });
 
   } catch (error) {
     console.error('Oracle command error:', error.response?.data || error.message);
@@ -82,7 +82,7 @@ app.post('/oracle_command', async (req, res) => {
 });
 
 // =======================
-// Legacy Routes (optional)
+// Legacy Manual Routes (optional)
 // =======================
 
 // COURSES
@@ -137,13 +137,13 @@ app.post('/create_user', async (req, res) => {
     res.json({ message: '✅ User created directly in Moodle.', moodleResponse: moodleResponse.data });
   } catch (error) {
     console.error('Error creating user:', error.response?.data || error.message);
-    res.status(500).json({ error: error.response?.data || error.message });
+    res.status(500).json({ message: '❌ Failed to create user in Moodle.', error: error.response?.data || error.message });
   }
 });
 
 // SYSTEM
 app.get('/get_server_status', (req, res) => {
-  res.json({ status: "Oracle Server Online." });
+  res.json({ status: "✅ Oracle Server Online." });
 });
 
 app.get('/monitor_server_load', (req, res) => {
@@ -157,7 +157,7 @@ app.get('/monitor_server_load', (req, res) => {
 });
 
 app.post('/trigger_manual_backup', (req, res) => {
-  res.json({ message: "Manual backup trigger not implemented yet." });
+  res.json({ message: "🛡️ Manual backup not implemented yet." });
 });
 
 // =======================
