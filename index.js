@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
-const qs = require('qs'); // Correct qs usage
+const qs = require('qs');
 const moodleFunctions = require('./moodle_functions_fixed.json');
 
 const app = express();
@@ -11,26 +11,39 @@ const PORT = process.env.PORT || 3000;
 const MOODLE_URL = 'https://conjureuniversity.online/moodle/webservice/rest/server.php';
 const MOODLE_TOKEN = '519f754c7dc83533788a2dd5872fe991';
 
+// Your real category IDs
+const CATEGORY_MAJORS = 47;
+const CATEGORY_MINORS = 48;
+const CATEGORY_CORE = 50;
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static files
 app.use('/.well-known', express.static(path.join(__dirname, '.well-known')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// =======================
-// Test Root
-// =======================
 app.get('/', (req, res) => {
   res.send('Oracle Relay Server Active.');
 });
 
-// =======================
-// COURSES (form-encoded)
-// =======================
+// =============================================
+// Create Course - uses correct category IDs
+// =============================================
 app.post('/create_course', async (req, res) => {
-  const { fullname, shortname, categoryid, startdate, enddate, visible } = req.body;
   try {
+    const { fullname, shortname, type, startdate, enddate, visible } = req.body;
+
+    // Auto-set categoryid if not provided
+    let categoryid;
+    if (req.body.categoryid) {
+      categoryid = req.body.categoryid;
+    } else {
+      if (type?.toLowerCase() === 'major') categoryid = CATEGORY_MAJORS;
+      else if (type?.toLowerCase() === 'minor') categoryid = CATEGORY_MINORS;
+      else if (type?.toLowerCase() === 'core') categoryid = CATEGORY_CORE;
+      else categoryid = CATEGORY_MAJORS; // default fallback
+    }
+
     const moodleResponse = await axios.post(
       MOODLE_URL,
       qs.stringify({
@@ -47,6 +60,7 @@ app.post('/create_course', async (req, res) => {
       }),
       { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
     );
+
     res.json(moodleResponse.data);
   } catch (error) {
     console.error('Error creating course:', error.response?.data || error.message);
@@ -54,203 +68,18 @@ app.post('/create_course', async (req, res) => {
   }
 });
 
-// =======================
-// USERS (form-encoded)
-// =======================
-app.post('/create_user', async (req, res) => {
-  const { firstname, lastname, email, username, password } = req.body;
-  try {
-    const moodleResponse = await axios.post(
-      MOODLE_URL,
-      qs.stringify({
-        wstoken: MOODLE_TOKEN,
-        wsfunction: 'core_user_create_users',
-        moodlewsrestformat: 'json',
-        'users[0][username]': username,
-        'users[0][password]': password,
-        'users[0][firstname]': firstname,
-        'users[0][lastname]': lastname,
-        'users[0][email]': email,
-        'users[0][auth]': 'manual',
-        'users[0][lang]': 'en',
-        'users[0][timezone]': 'America/Chicago',
-        'users[0][maildisplay]': 1
-      }),
-      { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
-    );
-    res.json({ message: 'User created directly in Moodle.', moodleResponse: moodleResponse.data });
-  } catch (error) {
-    console.error('Error creating user:', error.response?.data || error.message);
-    res.status(500).json({ message: 'Failed to create user in Moodle.', error: error.response?.data || error.message });
-  }
-});
-
-// =======================
-// GROUPS (application/json)
-// =======================
-app.post('/create_group', async (req, res) => {
-  const { courseid, name, description } = req.body;
-  try {
-    const moodleResponse = await axios.post(
-      `${MOODLE_URL}?wstoken=${MOODLE_TOKEN}&wsfunction=core_group_create_groups&moodlewsrestformat=json`,
-      {
-        groups: [
-          { courseid, name, description }
-        ]
-      },
-      { headers: { 'Content-Type': 'application/json' } }
-    );
-    res.json(moodleResponse.data);
-  } catch (error) {
-    console.error('Error creating group:', error.response?.data || error.message);
-    res.status(500).json({ error: error.response?.data || error.message });
-  }
-});
-
-app.post('/add_user_to_group', async (req, res) => {
-  const { groupid, userid } = req.body;
-  try {
-    const moodleResponse = await axios.post(
-      `${MOODLE_URL}?wstoken=${MOODLE_TOKEN}&wsfunction=core_group_add_group_members&moodlewsrestformat=json`,
-      {
-        members: [
-          { groupid, userid }
-        ]
-      },
-      { headers: { 'Content-Type': 'application/json' } }
-    );
-    res.json(moodleResponse.data);
-  } catch (error) {
-    console.error('Error adding user to group:', error.response?.data || error.message);
-    res.status(500).json({ error: error.response?.data || error.message });
-  }
-});
-
-// =======================
-// COHORTS (application/json)
-// =======================
-app.post('/create_cohort', async (req, res) => {
-  const { name, description, categoryid } = req.body;
-  try {
-    const moodleResponse = await axios.post(
-      `${MOODLE_URL}?wstoken=${MOODLE_TOKEN}&wsfunction=core_cohort_create_cohorts&moodlewsrestformat=json`,
-      {
-        cohorts: [
-          { name, description, categorytype: 'id', categoryid }
-        ]
-      },
-      { headers: { 'Content-Type': 'application/json' } }
-    );
-    res.json(moodleResponse.data);
-  } catch (error) {
-    console.error('Error creating cohort:', error.response?.data || error.message);
-    res.status(500).json({ error: error.response?.data || error.message });
-  }
-});
-
-app.post('/add_user_to_cohort', async (req, res) => {
-  const { cohortid, userid } = req.body;
-  try {
-    const moodleResponse = await axios.post(
-      `${MOODLE_URL}?wstoken=${MOODLE_TOKEN}&wsfunction=core_cohort_add_cohort_members&moodlewsrestformat=json`,
-      {
-        members: [
-          { cohortid, userid }
-        ]
-      },
-      { headers: { 'Content-Type': 'application/json' } }
-    );
-    res.json(moodleResponse.data);
-  } catch (error) {
-    console.error('Error adding user to cohort:', error.response?.data || error.message);
-    res.status(500).json({ error: error.response?.data || error.message });
-  }
-});
-
-// =======================
-// ASSIGNMENTS (application/json)
-// =======================
-app.post('/create_assignment', async (req, res) => {
-  const { courseid, name, description, duedate } = req.body;
-  try {
-    const moodleResponse = await axios.post(
-      `${MOODLE_URL}?wstoken=${MOODLE_TOKEN}&wsfunction=mod_assign_create_assignments&moodlewsrestformat=json`,
-      {
-        assignments: [
-          { courseid, name, intro: description, duedate }
-        ]
-      },
-      { headers: { 'Content-Type': 'application/json' } }
-    );
-    res.json(moodleResponse.data);
-  } catch (error) {
-    console.error('Error creating assignment:', error.response?.data || error.message);
-    res.status(500).json({ error: error.response?.data || error.message });
-  }
-});
-
-// =======================
-// MESSAGING (form-encoded)
-// =======================
-app.post('/send_message', async (req, res) => {
-  const { touserid, text } = req.body;
-  try {
-    const moodleResponse = await axios.post(
-      MOODLE_URL,
-      qs.stringify({
-        wstoken: MOODLE_TOKEN,
-        wsfunction: 'core_message_send_instant_messages',
-        moodlewsrestformat: 'json',
-        'messages[0][touserid]': touserid,
-        'messages[0][text]': text,
-        'messages[0][textformat]': 1
-      }),
-      { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
-    );
-    res.json(moodleResponse.data);
-  } catch (error) {
-    console.error('Error sending message:', error.response?.data || error.message);
-    res.status(500).json({ error: error.response?.data || error.message });
-  }
-});
-
-// =======================
-// SYSTEM MONITORING
-// =======================
-app.get('/get_server_status', (req, res) => {
-  res.json({ status: "Oracle Server Online." });
-});
-
-app.get('/monitor_server_load', (req, res) => {
-  const os = require('os');
-  res.json({
-    loadavg: os.loadavg(),
-    freemem: os.freemem(),
-    totalmem: os.totalmem(),
-    uptime: os.uptime()
-  });
-});
-
-app.post('/trigger_manual_backup', (req, res) => {
-  res.json({ message: "Manual backup trigger not implemented yet." });
-});
-// =======================
-// ORACLE SMART COMMAND (reads csv/json to auto-post)
-// =======================
+// =============================================
+// Oracle Command - fully smart auto POST
+// =============================================
 app.post('/oracle_command', async (req, res) => {
   const { command, parameters } = req.body;
 
   try {
-    if (!command) {
-      return res.status(400).json({ error: 'Missing command.' });
-    }
+    if (!command) return res.status(400).json({ error: 'Missing command.' });
 
-    // Find function info from the moodleFunctions list
     const matchedFunction = moodleFunctions.find(func => func.function_name.toLowerCase() === command.toLowerCase());
 
-    if (!matchedFunction) {
-      return res.status(404).json({ error: 'Command not found in Oracle function database.' });
-    }
+    if (!matchedFunction) return res.status(404).json({ error: 'Command not found.' });
 
     const { function_name, method, format } = matchedFunction;
 
@@ -260,18 +89,23 @@ app.post('/oracle_command', async (req, res) => {
       moodlewsrestformat: 'json'
     };
 
-    // Merge user-provided parameters into payload
+    // Special auto-category assignment for course creation
+    if (function_name === 'core_course_create_courses') {
+      if (!parameters['courses[0][categoryid]']) {
+        if (parameters.type?.toLowerCase() === 'major') parameters['courses[0][categoryid]'] = CATEGORY_MAJORS;
+        else if (parameters.type?.toLowerCase() === 'minor') parameters['courses[0][categoryid]'] = CATEGORY_MINORS;
+        else if (parameters.type?.toLowerCase() === 'core') parameters['courses[0][categoryid]'] = CATEGORY_CORE;
+        else parameters['courses[0][categoryid]'] = CATEGORY_MAJORS; // fallback
+      }
+    }
+
+    // Merge user parameters into payload
     if (format === 'form-encoded') {
-      // For form-encoded functions (like creating users/courses/messages)
-      Object.keys(parameters).forEach((key) => {
+      Object.keys(parameters).forEach(key => {
         payload[key] = parameters[key];
       });
     } else {
-      // For application/json functions (like groups, cohorts, assignments)
-      payload = {
-        ...payload,
-        ...parameters
-      };
+      payload = { ...payload, ...parameters };
     }
 
     const axiosConfig = {
@@ -293,9 +127,31 @@ app.post('/oracle_command', async (req, res) => {
     res.status(500).json({ error: error.response?.data || error.message });
   }
 });
-// =======================
+
+// =============================================
+// System Monitor
+// =============================================
+app.get('/get_server_status', (req, res) => {
+  res.json({ status: "Oracle Server Online." });
+});
+
+app.get('/monitor_server_load', (req, res) => {
+  const os = require('os');
+  res.json({
+    loadavg: os.loadavg(),
+    freemem: os.freemem(),
+    totalmem: os.totalmem(),
+    uptime: os.uptime()
+  });
+});
+
+app.post('/trigger_manual_backup', (req, res) => {
+  res.json({ message: "Manual backup trigger not implemented yet." });
+});
+
+// =============================================
 // Start Server
-// =======================
+// =============================================
 app.listen(PORT, () => {
   console.log(`Oracle Relay listening on port ${PORT}`);
 });
