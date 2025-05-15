@@ -73,7 +73,7 @@ app.post('/oracle_command', async (req, res) => {
       axiosConfig
     );
 
-    res.json({ message: `Command ${function_name} executed successfully.`, moodleResponse: moodleResponse.data });
+    res.json({ message: `✅ Command ${function_name} executed successfully in Moodle.`, moodleResponse: moodleResponse.data });
 
   } catch (error) {
     console.error('Oracle command error:', error.response?.data || error.message);
@@ -134,7 +134,7 @@ app.post('/create_user', async (req, res) => {
       }),
       { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
     );
-    res.json({ message: 'User created directly in Moodle.', moodleResponse: moodleResponse.data });
+    res.json({ message: '✅ User created directly in Moodle.', moodleResponse: moodleResponse.data });
   } catch (error) {
     console.error('Error creating user:', error.response?.data || error.message);
     res.status(500).json({ error: error.response?.data || error.message });
