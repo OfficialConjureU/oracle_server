@@ -33,19 +33,41 @@ app.get('/', (req, res) => {
 // Oracle Smart Command (Fixed)
 // =======================
 app.post('/oracle_command', async (req, res) => {
-  const { command, parameters } = req.body;
-
   try {
+    const { command, parameters } = req.body;
+
     if (!command) {
       return res.status(400).json({ error: 'Missing command field.' });
     }
 
-    // Prepare Moodle POST payload
-    let payload = {
-      wstoken: MOODLE_TOKEN,
+    // Direct POST to Moodle
+    const moodleURL = 'https://conjureuniversity.online/moodle/webservice/rest/server.php';
+
+    const payload = {
+      wstoken: '519f754c7dc83533788a2dd5872fe991',
       wsfunction: command,
-      moodlewsrestformat: 'json'
+      moodlewsrestformat: 'json',
+      ...parameters
     };
+
+    const axiosConfig = {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    };
+
+    const response = await axios.post(
+      moodleURL,
+      qs.stringify(payload),
+      axiosConfig
+    );
+
+    res.json({ message: 'Successfully executed command.', moodleResponse: response.data });
+  } catch (error) {
+    console.error('Oracle Command Error:', error.response?.data || error.message);
+    res.status(500).json({ error: error.response?.data || error.message });
+  }
+});
 
     // Merge parameters into payload (flatten properly)
     if (parameters && typeof parameters === 'object') {
