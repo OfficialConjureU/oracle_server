@@ -29,68 +29,49 @@ app.get('/', (req, res) => {
 });
 
 // =======================
-// Oracle Smart Autonomous Command
+// Oracle Smart Command (Fixed Version)
 // =======================
 app.post('/oracle_command', async (req, res) => {
   try {
-    const { task } = req.body;
+    const payload = req.body;
 
-    if (!task) {
-      return res.status(400).json({ error: 'Missing task field. Please describe the action you want.' });
+    if (!payload.command) {
+      return res.status(400).json({ error: 'Missing command field.' });
     }
 
-    // Try to intelligently understand the request
-    const lowerTask = task.toLowerCase();
+    // Build the outgoing payload
+    const outgoingPayload = {
+      wstoken: MOODLE_TOKEN,
+      wsfunction: payload.command,
+      moodlewsrestformat: 'json'
+    };
 
-    if (lowerTask.includes('create a user')) {
-      // Extract name and email
-      const nameMatch = task.match(/create a user\s+(.*?)\s+([^\s]+@[^\s]+)/i);
-      if (!nameMatch) {
-        return res.status(400).json({ error: 'Could not parse user creation details. Please provide full name and email.' });
+    // Merge all additional keys into outgoingPayload
+    for (const key in payload) {
+      if (key !== 'command') {
+        outgoingPayload[key] = payload[key];
       }
-      
-      const fullname = nameMatch[1];
-      const email = nameMatch[2];
-      const [firstname, ...lastnameParts] = fullname.split(' ');
-      const lastname = lastnameParts.join(' ') || 'Unknown';
-      const username = email.split('@')[0].toLowerCase();
-
-      const payload = {
-        wstoken: MOODLE_TOKEN,
-        wsfunction: 'core_user_create_users',
-        moodlewsrestformat: 'json',
-        'users[0][username]': username,
-        'users[0][password]': 'Welcome2025!',
-        'users[0][firstname]': firstname,
-        'users[0][lastname]': lastname,
-        'users[0][email]': email,
-        'users[0][auth]': 'manual',
-        'users[0][lang]': 'en',
-        'users[0][timezone]': 'America/Chicago',
-        'users[0][maildisplay]': 1
-      };
-
-      const axiosConfig = {
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-      };
-
-      const moodleResponse = await axios.post(
-        MOODLE_URL,
-        qs.stringify(payload),
-        axiosConfig
-      );
-
-      return res.json({ message: `User ${firstname} ${lastname} created successfully.`, moodleResponse: moodleResponse.data });
-    } else {
-      return res.status(400).json({ error: 'Unsupported task. Oracle only understands "create a user" commands at this time.' });
     }
+
+    const axiosConfig = {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    };
+
+    const response = await axios.post(
+      MOODLE_URL,
+      qs.stringify(outgoingPayload),
+      axiosConfig
+    );
+
+    res.json({ message: `Successfully executed ${payload.command}.`, moodleResponse: response.data });
 
   } catch (error) {
     console.error('Oracle Command Error:', error.response?.data || error.message);
     res.status(500).json({ error: error.response?.data || error.message });
   }
 });
-
 // =======================
 // Start Server
 // =======================
