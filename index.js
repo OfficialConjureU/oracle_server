@@ -1,11 +1,11 @@
 // =======================
-// ORACLE FINAL SERVER (FULL AUTOEXECUTE DIRECT TO MOODLE)
+// ORACLE FINAL SERVER (FULL INTELLIGENT AUTONOMOUS MODE)
 // =======================
 
 const express = require('express');
 const axios = require('axios');
-const path = require('path');
 const qs = require('qs');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,13 +14,10 @@ const PORT = process.env.PORT || 3000;
 const MOODLE_URL = 'https://conjureuniversity.online/moodle/webservice/rest/server.php';
 const MOODLE_TOKEN = '519f754c7dc83533788a2dd5872fe991';
 
-// Full Autoexecute Mode
-const directExecutionEnabled = true;
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Static files (Optional)
+// Static Files
 app.use('/.well-known', express.static(path.join(__dirname, '.well-known')));
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -28,59 +25,69 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Root Test
 // =======================
 app.get('/', (req, res) => {
-  res.send('Oracle Relay Server Active — AutoExecute Enabled.');
+  res.send('Oracle Relay Server Active.');
 });
 
 // =======================
-// Oracle Smart Command
+// Oracle Smart Autonomous Command
 // =======================
 app.post('/oracle_command', async (req, res) => {
   try {
-    const { command, parameters } = req.body;
+    const { task } = req.body;
 
-    if (!command) {
-      return res.status(400).json({ error: 'Missing command field.' });
+    if (!task) {
+      return res.status(400).json({ error: 'Missing task field. Please describe the action you want.' });
     }
 
-    const payload = {
-      wstoken: MOODLE_TOKEN,
-      wsfunction: command,
-      moodlewsrestformat: 'json',
-      ...parameters
-    };
+    // Try to intelligently understand the request
+    const lowerTask = task.toLowerCase();
 
-    const axiosConfig = {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
+    if (lowerTask.includes('create a user')) {
+      // Extract name and email
+      const nameMatch = task.match(/create a user\s+(.*?)\s+([^\s]+@[^\s]+)/i);
+      if (!nameMatch) {
+        return res.status(400).json({ error: 'Could not parse user creation details. Please provide full name and email.' });
       }
-    };
+      
+      const fullname = nameMatch[1];
+      const email = nameMatch[2];
+      const [firstname, ...lastnameParts] = fullname.split(' ');
+      const lastname = lastnameParts.join(' ') || 'Unknown';
+      const username = email.split('@')[0].toLowerCase();
 
-    if (directExecutionEnabled) {
-      const response = await axios.post(
+      const payload = {
+        wstoken: MOODLE_TOKEN,
+        wsfunction: 'core_user_create_users',
+        moodlewsrestformat: 'json',
+        'users[0][username]': username,
+        'users[0][password]': 'Welcome2025!',
+        'users[0][firstname]': firstname,
+        'users[0][lastname]': lastname,
+        'users[0][email]': email,
+        'users[0][auth]': 'manual',
+        'users[0][lang]': 'en',
+        'users[0][timezone]': 'America/Chicago',
+        'users[0][maildisplay]': 1
+      };
+
+      const axiosConfig = {
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      };
+
+      const moodleResponse = await axios.post(
         MOODLE_URL,
         qs.stringify(payload),
         axiosConfig
       );
 
-      return res.json({
-        message: `✅ Oracle Auto-Executed Command: ${command}`,
-        moodleResponse: response.data
-      });
+      return res.json({ message: `User ${firstname} ${lastname} created successfully.`, moodleResponse: moodleResponse.data });
     } else {
-      // Old mode (not used anymore)
-      return res.json({
-        message: '⚡ Oracle would have executed this, but AutoExecution is OFF.',
-        curlExample: {
-          url: MOODLE_URL,
-          headers: axiosConfig.headers,
-          payload: payload
-        }
-      });
+      return res.status(400).json({ error: 'Unsupported task. Oracle only understands "create a user" commands at this time.' });
     }
 
   } catch (error) {
-    console.error('Oracle AutoCommand Error:', error.response?.data || error.message);
-    return res.status(500).json({ error: error.response?.data || error.message });
+    console.error('Oracle Command Error:', error.response?.data || error.message);
+    res.status(500).json({ error: error.response?.data || error.message });
   }
 });
 
@@ -88,5 +95,5 @@ app.post('/oracle_command', async (req, res) => {
 // Start Server
 // =======================
 app.listen(PORT, () => {
-  console.log(`🔮 Oracle Relay Server listening on port ${PORT} — AutoExecute ON.`);
+  console.log(`Oracle Relay Server listening on port ${PORT}`);
 });
