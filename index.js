@@ -30,36 +30,48 @@ app.get('/', (req, res) => {
 });
 
 // =======================
-// Oracle Smart Command
+// Oracle Smart Direct Command to Moodle
 // =======================
 app.post('/oracle_command', async (req, res) => {
   try {
     const { command, parameters } = req.body;
 
     if (!command) {
-      return res.status(400).json({ error: 'Missing command field.' });
+      return res.status(400).json({ error: 'Missing "command" field.' });
     }
 
+    if (!parameters || typeof parameters !== 'object') {
+      return res.status(400).json({ error: 'Missing or invalid "parameters" field.' });
+    }
+
+    // Construct payload for Moodle
     const payload = {
       wstoken: MOODLE_TOKEN,
       wsfunction: command,
       moodlewsrestformat: 'json',
-      ...parameters
     };
 
+    // Flatten parameters properly
+    Object.keys(parameters).forEach(key => {
+      payload[key] = parameters[key];
+    });
+
+    // Prepare axios config
     const axiosConfig = {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     };
 
-    const response = await axios.post(
+    // Send request to Moodle
+    const moodleResponse = await axios.post(
       MOODLE_URL,
       qs.stringify(payload),
       axiosConfig
     );
 
-    res.json({ message: `Successfully executed ${command}.`, moodleResponse: response.data });
+    res.json({
+      message: `Command "${command}" executed successfully.`,
+      moodleResponse: moodleResponse.data
+    });
 
   } catch (error) {
     console.error('Oracle Command Error:', error.response?.data || error.message);
