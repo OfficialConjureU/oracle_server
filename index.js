@@ -1,5 +1,5 @@
 // =======================
-// ORACLE FINAL SERVER (FULL DIRECT TO MOODLE)
+// ORACLE FINAL SMART SERVER
 // =======================
 
 const express = require('express');
@@ -30,48 +30,48 @@ app.get('/', (req, res) => {
 });
 
 // =======================
-// Oracle Smart Direct Command to Moodle
+// Oracle Smart Command
 // =======================
 app.post('/oracle_command', async (req, res) => {
   try {
     const { command, parameters } = req.body;
 
     if (!command) {
-      return res.status(400).json({ error: 'Missing "command" field.' });
+      return res.status(400).json({ error: 'Missing command field.' });
     }
 
-    if (!parameters || typeof parameters !== 'object') {
-      return res.status(400).json({ error: 'Missing or invalid "parameters" field.' });
-    }
-
-    // Construct payload for Moodle
-    const payload = {
+    let payload = {
       wstoken: MOODLE_TOKEN,
       wsfunction: command,
-      moodlewsrestformat: 'json',
+      moodlewsrestformat: 'json'
     };
 
-    // Flatten parameters properly
-    Object.keys(parameters).forEach(key => {
-      payload[key] = parameters[key];
-    });
+    // Flatten parameters if required
+    if (parameters && typeof parameters === 'object') {
+      if (command === 'core_user_create_users' || command.startsWith('core_')) {
+        // Special encoding for Moodle weirdness (nested fields)
+        Object.keys(parameters).forEach((key) => {
+          payload[`users[0][${key}]`] = parameters[key];
+        });
+      } else {
+        // Normal flat parameters
+        payload = { ...payload, ...parameters };
+      }
+    }
 
-    // Prepare axios config
     const axiosConfig = {
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
     };
 
-    // Send request to Moodle
-    const moodleResponse = await axios.post(
+    const response = await axios.post(
       MOODLE_URL,
       qs.stringify(payload),
       axiosConfig
     );
 
-    res.json({
-      message: `Command "${command}" executed successfully.`,
-      moodleResponse: moodleResponse.data
-    });
+    res.json({ message: `Successfully executed ${command}.`, moodleResponse: response.data });
 
   } catch (error) {
     console.error('Oracle Command Error:', error.response?.data || error.message);
