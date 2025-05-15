@@ -1,5 +1,5 @@
 // =======================
-// ORACLE FINAL SERVER (FULL)
+// ORACLE FINAL SERVER (FULL FIXED VERSION)
 // =======================
 
 const express = require('express');
@@ -14,9 +14,6 @@ const PORT = process.env.PORT || 3000;
 // Moodle Config
 const MOODLE_URL = 'https://conjureuniversity.online/moodle/webservice/rest/server.php';
 const MOODLE_TOKEN = '519f754c7dc83533788a2dd5872fe991';
-
-// Proxy Config (NEW)
-const PROXY_URL = 'https://oracle-moodle-proxy.onrender.com/moodle_direct_post';
 
 // Load full Moodle API functions
 const moodleFunctions = require('./moodle_functions_fixed.json');
@@ -38,9 +35,6 @@ app.get('/', (req, res) => {
 // =======================
 // Smart Oracle Command
 // =======================
-// =======================
-// Oracle Smart Command (Now Fully Proxy-Aware)
-// =======================
 app.post('/oracle_command', async (req, res) => {
   const { command, parameters } = req.body;
 
@@ -55,87 +49,16 @@ app.post('/oracle_command', async (req, res) => {
       return res.status(404).json({ error: 'Command not found in Oracle Moodle database.' });
     }
 
-    const { function_name } = matchedFunction;
+    const { function_name, method, format } = matchedFunction;
 
-    // ==========================================
-    // New: Check if this is a Moodle-bound function
-    // ==========================================
-    const moodleFunctionPrefix = 'core_'; // All official Moodle API functions start with core_, mod_, enrol_, etc.
-    const modFunctionPrefix = 'mod_';
-    const enrolFunctionPrefix = 'enrol_';
-    const blockFunctionPrefix = 'block_';
-
-    const isMoodleFunction =
-      function_name.startsWith(moodleFunctionPrefix) ||
-      function_name.startsWith(modFunctionPrefix) ||
-      function_name.startsWith(enrolFunctionPrefix) ||
-      function_name.startsWith(blockFunctionPrefix);
-
-    if (isMoodleFunction) {
-      // ===============================
-      // Forward to Moodle Proxy Server
-      // ===============================
-
-      const proxyResponse = await axios.post('https://oracle-moodle-proxy.onrender.com/moodle_direct_post', {
-        wsfunction: function_name,
-        users: parameters.users // users or whatever the payload you gave is
-      }, {
-        headers: { 'Content-Type': 'application/json' }
-      });
-
-      return res.json({
-        message: `Moodle Proxy Command ${function_name} executed successfully.`,
-        moodleResponse: proxyResponse.data
-      });
-    }
-
-    // ===============================
-    // Otherwise normal Oracle commands (internal)
-    // ===============================
-
-    // Build the Moodle API payload
+    // Base Payload
     let payload = {
       wstoken: MOODLE_TOKEN,
       wsfunction: function_name,
       moodlewsrestformat: 'json'
     };
 
-    if (parameters && typeof parameters === 'object') {
-      payload = { ...payload, ...parameters };
-    }
-
-    const moodleResponse = await axios.post(
-      MOODLE_URL,
-      qs.stringify(payload),
-      {
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-      }
-    );
-
-    res.json({ message: `Oracle internal command ${function_name} executed successfully.`, moodleResponse: moodleResponse.data });
-
-  } catch (error) {
-    console.error('Oracle command error:', error.response?.data || error.message);
-    res.status(500).json({ error: error.response?.data || error.message });
-  }
-});
-
-      const proxyResponse = await axios.post(
-        PROXY_URL,
-        proxyPayload,
-        { headers: { 'Content-Type': 'application/json' } }
-      );
-
-      return res.json({ message: `Proxy Command ${function_name} posted successfully.`, proxyResponse: proxyResponse.data });
-    }
-
-    // Fallback to regular Moodle API post
-    let payload = {
-      wstoken: MOODLE_TOKEN,
-      wsfunction: function_name,
-      moodlewsrestformat: 'json'
-    };
-
+    // Merge user parameters
     if (parameters && typeof parameters === 'object') {
       if (format === 'form-encoded') {
         Object.keys(parameters).forEach(key => {
@@ -146,7 +69,7 @@ app.post('/oracle_command', async (req, res) => {
       }
     }
 
-    // Fill in any default parameters from moodle_functions_fixed.json
+    // Fill in default parameters if missing
     if (matchedFunction.default_parameters) {
       for (const [key, value] of Object.entries(matchedFunction.default_parameters)) {
         if (!payload.hasOwnProperty(key)) {
@@ -155,19 +78,32 @@ app.post('/oracle_command', async (req, res) => {
       }
     }
 
+    // Correct Headers
     const axiosConfig = {
       headers: {
         'Content-Type': format === 'form-encoded' ? 'application/x-www-form-urlencoded' : 'application/json'
       }
     };
 
+    // ✅ Check if command should go through Moodle Proxy Server
+    if (function_name.startsWith('core_') || function_name.startsWith('mod_') || function_name.startsWith('enrol_')) {
+      // Redirect through Moodle Proxy Server
+      const proxyResponse = await axios.post('https://oracle-moodle-proxy.onrender.com/moodle_direct_post', {
+        wsfunction: function_name,
+        users: parameters.users || [], // Important for user creations
+      });
+
+      return res.json({ message: `Proxy call to Moodle for ${function_name} succeeded.`, data: proxyResponse.data });
+    }
+
+    // ✅ Otherwise call Moodle API directly
     const moodleResponse = await axios.post(
       MOODLE_URL,
       format === 'form-encoded' ? qs.stringify(payload) : payload,
       axiosConfig
     );
 
-    res.json({ message: `Command ${function_name} executed successfully.`, moodleResponse: moodleResponse.data });
+    res.json({ message: `Direct Moodle command ${function_name} executed successfully.`, moodleResponse: moodleResponse.data });
 
   } catch (error) {
     console.error('Oracle command error:', error.response?.data || error.message);
