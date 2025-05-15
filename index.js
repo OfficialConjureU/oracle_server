@@ -1,5 +1,5 @@
 // =======================
-// ORACLE FINAL SERVER (FULL AUTO - NO PREDICT, JUST FIRE)
+// ORACLE FINAL SERVER (FULL AUTOEXECUTE DIRECT TO MOODLE)
 // =======================
 
 const express = require('express');
@@ -14,11 +14,13 @@ const PORT = process.env.PORT || 3000;
 const MOODLE_URL = 'https://conjureuniversity.online/moodle/webservice/rest/server.php';
 const MOODLE_TOKEN = '519f754c7dc83533788a2dd5872fe991';
 
-// Middlewares
+// Full Autoexecute Mode
+const directExecutionEnabled = true;
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Static files
+// Static files (Optional)
 app.use('/.well-known', express.static(path.join(__dirname, '.well-known')));
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -26,20 +28,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Root Test
 // =======================
 app.get('/', (req, res) => {
-  res.send('Oracle Relay Server Fully Active.');
+  res.send('Oracle Relay Server Active — AutoExecute Enabled.');
 });
 
 // =======================
-// Oracle Smart Command (NO PREDICTION, FULL SEND)
+// Oracle Smart Command
 // =======================
 app.post('/oracle_command', async (req, res) => {
-  const { command, parameters } = req.body;
-
-  if (!command) {
-    return res.status(400).json({ error: 'Missing command field.' });
-  }
-
   try {
+    const { command, parameters } = req.body;
+
+    if (!command) {
+      return res.status(400).json({ error: 'Missing command field.' });
+    }
+
     const payload = {
       wstoken: MOODLE_TOKEN,
       wsfunction: command,
@@ -53,29 +55,32 @@ app.post('/oracle_command', async (req, res) => {
       }
     };
 
-    // Directly POST without predicting or hesitating
-    const moodleResponse = await axios.post(
-      MOODLE_URL,
-      qs.stringify(payload),
-      axiosConfig
-    );
+    if (directExecutionEnabled) {
+      const response = await axios.post(
+        MOODLE_URL,
+        qs.stringify(payload),
+        axiosConfig
+      );
 
-    // Return Moodle's actual response to you
-    res.json({
-      status: 'Success',
-      sentCommand: command,
-      moodleResponse: moodleResponse.data
-    });
+      return res.json({
+        message: `✅ Oracle Auto-Executed Command: ${command}`,
+        moodleResponse: response.data
+      });
+    } else {
+      // Old mode (not used anymore)
+      return res.json({
+        message: '⚡ Oracle would have executed this, but AutoExecution is OFF.',
+        curlExample: {
+          url: MOODLE_URL,
+          headers: axiosConfig.headers,
+          payload: payload
+        }
+      });
+    }
 
   } catch (error) {
-    console.error('Oracle Command Error:', error.response?.data || error.message);
-
-    // Even if error happens, show it cleanly
-    res.status(500).json({
-      status: 'Error',
-      sentCommand: command,
-      moodleError: error.response?.data || error.message
-    });
+    console.error('Oracle AutoCommand Error:', error.response?.data || error.message);
+    return res.status(500).json({ error: error.response?.data || error.message });
   }
 });
 
@@ -83,5 +88,5 @@ app.post('/oracle_command', async (req, res) => {
 // Start Server
 // =======================
 app.listen(PORT, () => {
-  console.log(`Oracle Server now fully ACTIVE on port ${PORT}`);
+  console.log(`🔮 Oracle Relay Server listening on port ${PORT} — AutoExecute ON.`);
 });
