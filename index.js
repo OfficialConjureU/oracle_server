@@ -1,12 +1,11 @@
 // =======================
-// ORACLE FINAL SERVER (FULL)
+// ORACLE FINAL SERVER (FULL DIRECT TO MOODLE)
 // =======================
 
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
 const qs = require('qs');
-const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -15,10 +14,11 @@ const PORT = process.env.PORT || 3000;
 const MOODLE_URL = 'https://conjureuniversity.online/moodle/webservice/rest/server.php';
 const MOODLE_TOKEN = '519f754c7dc83533788a2dd5872fe991';
 
+// Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Static Files
+// Static files
 app.use('/.well-known', express.static(path.join(__dirname, '.well-known')));
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 });
 
 // =======================
-// Oracle Smart Command (Fixed)
+// Oracle Smart Command
 // =======================
 app.post('/oracle_command', async (req, res) => {
   try {
@@ -40,11 +40,8 @@ app.post('/oracle_command', async (req, res) => {
       return res.status(400).json({ error: 'Missing command field.' });
     }
 
-    // Direct POST to Moodle
-    const moodleURL = 'https://conjureuniversity.online/moodle/webservice/rest/server.php';
-
     const payload = {
-      wstoken: '519f754c7dc83533788a2dd5872fe991',
+      wstoken: MOODLE_TOKEN,
       wsfunction: command,
       moodlewsrestformat: 'json',
       ...parameters
@@ -57,42 +54,15 @@ app.post('/oracle_command', async (req, res) => {
     };
 
     const response = await axios.post(
-      moodleURL,
-      qs.stringify(payload),
-      axiosConfig
-    );
-
-    res.json({ message: 'Successfully executed command.', moodleResponse: response.data });
-  } catch (error) {
-    console.error('Oracle Command Error:', error.response?.data || error.message);
-    res.status(500).json({ error: error.response?.data || error.message });
-  }
-});
-
-    // Merge parameters into payload (flatten properly)
-    if (parameters && typeof parameters === 'object') {
-      Object.keys(parameters).forEach(key => {
-        payload[key] = parameters[key];
-      });
-    }
-
-    // Determine proper headers
-    const axiosConfig = {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
-    };
-
-    const moodleResponse = await axios.post(
       MOODLE_URL,
       qs.stringify(payload),
       axiosConfig
     );
 
-    res.json({ message: `Command ${command} executed successfully.`, moodleResponse: moodleResponse.data });
+    res.json({ message: `Successfully executed ${command}.`, moodleResponse: response.data });
 
   } catch (error) {
-    console.error('Oracle command error:', error.response?.data || error.message);
+    console.error('Oracle Command Error:', error.response?.data || error.message);
     res.status(500).json({ error: error.response?.data || error.message });
   }
 });
@@ -101,5 +71,5 @@ app.post('/oracle_command', async (req, res) => {
 // Start Server
 // =======================
 app.listen(PORT, () => {
-  console.log(`Oracle Relay listening on port ${PORT}`);
+  console.log(`Oracle Relay Server listening on port ${PORT}`);
 });
