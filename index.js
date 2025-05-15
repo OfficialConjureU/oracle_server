@@ -1,5 +1,5 @@
 // =======================
-// ORACLE FINAL SMART SERVER
+// ORACLE FINAL SERVER (FLAT STRUCTURE, FULL MOODLE COMPLIANCE)
 // =======================
 
 const express = require('express');
@@ -34,30 +34,23 @@ app.get('/', (req, res) => {
 // =======================
 app.post('/oracle_command', async (req, res) => {
   try {
-    const { command, parameters } = req.body;
+    let payload = req.body;
 
-    if (!command) {
-      return res.status(400).json({ error: 'Missing command field.' });
+    // If the payload includes "command" and "parameters" keys, transform it properly
+    if (payload.command && payload.parameters) {
+      payload = {
+        wstoken: MOODLE_TOKEN,
+        wsfunction: payload.command,
+        moodlewsrestformat: 'json',
+        ...payload.parameters
+      };
+    } else if (!payload.wstoken) {
+      // If wstoken is missing, add it
+      payload.wstoken = MOODLE_TOKEN;
     }
 
-    let payload = {
-      wstoken: MOODLE_TOKEN,
-      wsfunction: command,
-      moodlewsrestformat: 'json'
-    };
-
-    // Flatten parameters if required
-    if (parameters && typeof parameters === 'object') {
-      if (command === 'core_user_create_users' || command.startsWith('core_')) {
-        // Special encoding for Moodle weirdness (nested fields)
-        Object.keys(parameters).forEach((key) => {
-          payload[`users[0][${key}]`] = parameters[key];
-        });
-      } else {
-        // Normal flat parameters
-        payload = { ...payload, ...parameters };
-      }
-    }
+    // Always make sure moodlewsrestformat is set
+    payload.moodlewsrestformat = 'json';
 
     const axiosConfig = {
       headers: {
@@ -71,7 +64,7 @@ app.post('/oracle_command', async (req, res) => {
       axiosConfig
     );
 
-    res.json({ message: `Successfully executed ${command}.`, moodleResponse: response.data });
+    res.json({ message: `Successfully executed ${payload.wsfunction}.`, moodleResponse: response.data });
 
   } catch (error) {
     console.error('Oracle Command Error:', error.response?.data || error.message);
