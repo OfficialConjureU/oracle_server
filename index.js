@@ -12,10 +12,11 @@ const MOODLE_TOKEN = '519f754c7dc83533788a2dd5872fe991';
 // Load universal schema
 const functionMap = JSON.parse(fs.readFileSync('./Moodle_Universal_Functions_Map.json', 'utf8'));
 
-// Raw body parser to preserve bracketed keys
+// Middleware
 app.use(express.urlencoded({ extended: false, type: 'application/x-www-form-urlencoded' }));
 app.use(express.json());
 
+// Universal API Relay Endpoint
 app.post('/oracle_command', async (req, res) => {
   try {
     const rawBody = req.body;
@@ -30,16 +31,18 @@ app.post('/oracle_command', async (req, res) => {
       return res.status(400).json({ error: `Unknown command: ${command}` });
     }
 
-    const missing = Object.keys(fn.parameters || {}).filter(p => !(p in rawBody));
+    // Check for required parameters
+    const missing = Object.keys(fn.parameters || {}).filter(p => !(p in params));
     if (missing.length > 0) {
       return res.status(400).json({ error: `Missing parameters: ${missing.join(', ')}` });
     }
 
+    // Proper payload without 'command'
     const payload = {
       wstoken: MOODLE_TOKEN,
       wsfunction: command,
       moodlewsrestformat: 'json',
-      ...rawBody
+      ...params
     };
 
     const response = await axios.post(
@@ -63,6 +66,7 @@ app.post('/oracle_command', async (req, res) => {
   }
 });
 
+// Start server
 app.listen(PORT, () => {
   console.log(`✅ Oracle Moodle Relay running on port ${PORT}`);
 });
