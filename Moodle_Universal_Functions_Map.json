@@ -1,0 +1,3530 @@
+{
+    "core_user_search_identity": {
+        "area": "\\core_user\\search_identity",
+        "description": "Return list of users identities matching the given criteria in their name or other identity fields.",
+        "parameters": {},
+        "returns": {}
+    },
+    "auth_email_get_signup_settings": {
+        "area": "auth_email",
+        "description": "Get the signup required settings and profile fields.",
+        "parameters": {},
+        "returns": {}
+    },
+    "auth_email_signup_user": {
+        "area": "auth_email",
+        "description": "Adds a new user (pendingto be confirmed) in the site.",
+        "parameters": {},
+        "returns": {}
+    },
+    "block_recentlyaccesseditems_get_recent_items": {
+        "area": "block_recentlyaccesseditems",
+        "description": "List of items a user has accessed most recently.",
+        "parameters": {},
+        "returns": {}
+    },
+    "block_starredcourses_get_starred_courses": {
+        "area": "block_starredcourses",
+        "description": "Get users starred courses.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_create_userfeedback_action_record": {
+        "area": "core\\record_userfeedback_action",
+        "description": "Record the action that the user takes in the user feedback notification for future use.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_auth_confirm_user": {
+        "area": "core_auth",
+        "description": "Confirm a user account.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_auth_is_age_digital_consent_verification_enabled": {
+        "area": "core_auth",
+        "description": "Checks if age digital consent verification is enabled.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_auth_is_minor": {
+        "area": "core_auth",
+        "description": "Requests a check if a user is a digital minor.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_auth_request_password_reset": {
+        "area": "core_auth",
+        "description": "Requests a password reset.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_auth_resend_confirmation_email": {
+        "area": "core_auth",
+        "description": "Resend confirmation email.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_backup_get_async_backup_links_backup": {
+        "area": "core_backup",
+        "description": "Gets the data to use when updating the status table row in the UI for when an async backup completes.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_backup_get_async_backup_links_restore": {
+        "area": "core_backup",
+        "description": "Gets the data to use when updating the status table row in the UI for when an async restore completes.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_backup_get_async_backup_progress": {
+        "area": "core_backup",
+        "description": "Get the progress of an Asyncronhous backup.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_backup_get_copy_progress": {
+        "area": "core_backup",
+        "description": "Gets the progress of course copy operations.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_backup_submit_copy_form": {
+        "area": "core_backup",
+        "description": "Handles ajax submission of course copy form.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_badges_get_user_badges": {
+        "area": "core_badges",
+        "description": "Returns the list of badges awarded to a user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_block_get_course_blocks": {
+        "area": "core_block",
+        "description": "Returns blocks information for a course.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_block_get_dashboard_blocks": {
+        "area": "core_block",
+        "description": "Returns blocks information for the given user dashboard.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_block_fetch_addable_blocks": {
+        "area": "core_block\\fetch_addable_blocks",
+        "description": "Returns all addable blocks in a given page.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_blog_get_entries": {
+        "area": "core_blog",
+        "description": "Returns blog entries.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_blog_view_entries": {
+        "area": "core_blog",
+        "description": "Trigger the blog_entries_viewed event.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_create_calendar_events": {
+        "area": "core_calendar",
+        "description": "Create calendar events",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_delete_calendar_events": {
+        "area": "core_calendar",
+        "description": "Delete calendar events",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_get_action_events_by_course": {
+        "area": "core_calendar",
+        "description": "Get calendar action events by course",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_get_action_events_by_courses": {
+        "area": "core_calendar",
+        "description": "Get calendar action events by courses",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_get_action_events_by_timesort": {
+        "area": "core_calendar",
+        "description": "Get calendar action events by tiemsort",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_get_allowed_event_types": {
+        "area": "core_calendar",
+        "description": "Get the type of events a user can create in the given course.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_get_calendar_access_information": {
+        "area": "core_calendar",
+        "description": "Convenience function to retrieve some permissions/access information for the given course calendar.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_get_calendar_day_view": {
+        "area": "core_calendar",
+        "description": "Fetch the day view data for a calendar",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_get_calendar_event_by_id": {
+        "area": "core_calendar",
+        "description": "Get calendar event by id",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_get_calendar_events": {
+        "area": "core_calendar",
+        "description": "Get calendar events",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_get_calendar_monthly_view": {
+        "area": "core_calendar",
+        "description": "Fetch the monthly view data for a calendar",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_get_calendar_upcoming_view": {
+        "area": "core_calendar",
+        "description": "Fetch the upcoming view data for a calendar",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_get_timestamps": {
+        "area": "core_calendar",
+        "description": "Fetch unix timestamps for given date times.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_submit_create_update_form": {
+        "area": "core_calendar",
+        "description": "Submit form data for event form",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_update_event_start_day": {
+        "area": "core_calendar",
+        "description": "Update the start day (but not time) for an event.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_calendar_get_calendar_export_token": {
+        "area": "core_calendar\\export\\token",
+        "description": "Return the auth token required for exporting a calendar.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_cohort_add_cohort_members": {
+        "area": "core_cohort",
+        "description": "Add members to cohort",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_cohort_create_cohorts": {
+        "area": "core_cohort",
+        "description": "Create cohorts",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_cohort_delete_cohort_members": {
+        "area": "core_cohort",
+        "description": "Delete members from cohort",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_cohort_delete_cohorts": {
+        "area": "core_cohort",
+        "description": "Delete cohorts",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_cohort_get_cohort_members": {
+        "area": "core_cohort",
+        "description": "Get cohort members",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_cohort_get_cohorts": {
+        "area": "core_cohort",
+        "description": "Get cohorts",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_cohort_search_cohorts": {
+        "area": "core_cohort",
+        "description": "Search for cohorts.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_cohort_update_cohorts": {
+        "area": "core_cohort",
+        "description": "Update cohorts",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_comment_add_comments": {
+        "area": "core_comment",
+        "description": "Adds a comment or comments.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_comment_delete_comments": {
+        "area": "core_comment",
+        "description": "Deletes a comment or comments.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_comment_get_comments": {
+        "area": "core_comment",
+        "description": "Return all the comments for an specific component, context.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_add_competency_to_course": {
+        "area": "core_competency",
+        "description": "Add competency to a course",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_add_competency_to_plan": {
+        "area": "core_competency",
+        "description": "Add a competency to a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_add_competency_to_template": {
+        "area": "core_competency",
+        "description": "Add competency to a template",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_add_related_competency": {
+        "area": "core_competency",
+        "description": "Create a relationship between competencies",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_approve_plan": {
+        "area": "core_competency",
+        "description": "Approve a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_competency_framework_viewed": {
+        "area": "core_competency",
+        "description": "Notify a competency framework as being viewed",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_competency_viewed": {
+        "area": "core_competency",
+        "description": "Report a competency as being viewed",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_complete_plan": {
+        "area": "core_competency",
+        "description": "Complete a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_count_competencies": {
+        "area": "core_competency",
+        "description": "Count the competencies",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_count_competencies_in_course": {
+        "area": "core_competency",
+        "description": "Count competencies in a course",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_count_competencies_in_template": {
+        "area": "core_competency",
+        "description": "Count the competencies in a template",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_count_competency_frameworks": {
+        "area": "core_competency",
+        "description": "Count the competency frameworks",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_count_course_module_competencies": {
+        "area": "core_competency",
+        "description": "Count the competencies in a course module",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_count_courses_using_competency": {
+        "area": "core_competency",
+        "description": "Count courses using a competency",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_count_templates": {
+        "area": "core_competency",
+        "description": "Count templates",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_count_templates_using_competency": {
+        "area": "core_competency",
+        "description": "Count templates using a competency",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_create_competency": {
+        "area": "core_competency",
+        "description": "Create a competency",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_create_competency_framework": {
+        "area": "core_competency",
+        "description": "Create a competency framework",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_create_plan": {
+        "area": "core_competency",
+        "description": "Create a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_create_template": {
+        "area": "core_competency",
+        "description": "Create a template",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_create_user_evidence_competency": {
+        "area": "core_competency",
+        "description": "Link an evidence of prior learning with a user's competency",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_delete_competency": {
+        "area": "core_competency",
+        "description": "Delete a competency",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_delete_competency_framework": {
+        "area": "core_competency",
+        "description": "Delete a competency framework",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_delete_evidence": {
+        "area": "core_competency",
+        "description": "Delete an evidence",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_delete_plan": {
+        "area": "core_competency",
+        "description": "Delete a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_delete_template": {
+        "area": "core_competency",
+        "description": "Delete a template",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_delete_user_evidence": {
+        "area": "core_competency",
+        "description": "Delete an evidence of prior learning",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_delete_user_evidence_competency": {
+        "area": "core_competency",
+        "description": "Remove a link between an evidence of prior learning and a user's competency",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_duplicate_competency_framework": {
+        "area": "core_competency",
+        "description": "Duplicate a competency framework",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_duplicate_template": {
+        "area": "core_competency",
+        "description": "Duplicate a template",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_get_scale_values": {
+        "area": "core_competency",
+        "description": "Get the values for a scale",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_grade_competency": {
+        "area": "core_competency",
+        "description": "Rate a user's competency",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_grade_competency_in_course": {
+        "area": "core_competency",
+        "description": "Rate a user's competency in a course",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_grade_competency_in_plan": {
+        "area": "core_competency",
+        "description": "Rate a user's competency in a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_list_competencies": {
+        "area": "core_competency",
+        "description": "List competencies",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_list_competencies_in_template": {
+        "area": "core_competency",
+        "description": "List the competencies of a template",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_list_competency_frameworks": {
+        "area": "core_competency",
+        "description": "List the competency frameworks",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_list_course_competencies": {
+        "area": "core_competency",
+        "description": "List the competencies in a course",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_list_course_module_competencies": {
+        "area": "core_competency",
+        "description": "List the competencies in a course module",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_list_plan_competencies": {
+        "area": "core_competency",
+        "description": "List a learning plan's competencies",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_list_templates": {
+        "area": "core_competency",
+        "description": "List templates",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_list_templates_using_competency": {
+        "area": "core_competency",
+        "description": "List templates using a competency",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_list_user_plans": {
+        "area": "core_competency",
+        "description": "List a user's learning plans",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_move_down_competency": {
+        "area": "core_competency",
+        "description": "Move a competency down in its branch",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_move_up_competency": {
+        "area": "core_competency",
+        "description": "Move a competency up in its branch",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_plan_cancel_review_request": {
+        "area": "core_competency",
+        "description": "Cancel the review request of a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_plan_request_review": {
+        "area": "core_competency",
+        "description": "Request the review of a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_plan_start_review": {
+        "area": "core_competency",
+        "description": "Start the review of a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_plan_stop_review": {
+        "area": "core_competency",
+        "description": "Stop the review of a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_read_competency": {
+        "area": "core_competency",
+        "description": "Fetch a competency",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_read_competency_framework": {
+        "area": "core_competency",
+        "description": "Fetch a competency framework",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_read_plan": {
+        "area": "core_competency",
+        "description": "Fetch a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_read_template": {
+        "area": "core_competency",
+        "description": "Fetch a template",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_read_user_evidence": {
+        "area": "core_competency",
+        "description": "Fetch an evidence of prior learning",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_remove_competency_from_course": {
+        "area": "core_competency",
+        "description": "Remove competency from a course",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_remove_competency_from_plan": {
+        "area": "core_competency",
+        "description": "Remove a competency from a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_remove_competency_from_template": {
+        "area": "core_competency",
+        "description": "Remove competency from template",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_remove_related_competency": {
+        "area": "core_competency",
+        "description": "Remove a relationship between competencies",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_reopen_plan": {
+        "area": "core_competency",
+        "description": "Reopen a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_reorder_course_competency": {
+        "area": "core_competency",
+        "description": "Reorder competencies in a course",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_reorder_plan_competency": {
+        "area": "core_competency",
+        "description": "Reopen a competency in a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_reorder_template_competency": {
+        "area": "core_competency",
+        "description": "Reorder competencies in a template",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_request_review_of_user_evidence_linked_competencies": {
+        "area": "core_competency",
+        "description": "Request the review of the user's competencies linked to an evidence of prior learning",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_search_competencies": {
+        "area": "core_competency",
+        "description": "Search for competencies",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_set_course_competency_ruleoutcome": {
+        "area": "core_competency",
+        "description": "Set the rule of course competencies",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_set_parent_competency": {
+        "area": "core_competency",
+        "description": "Relocate a competency to another parent",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_template_has_related_data": {
+        "area": "core_competency",
+        "description": "Check whether a template has related data",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_template_viewed": {
+        "area": "core_competency",
+        "description": "Report a template as being viewed",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_unapprove_plan": {
+        "area": "core_competency",
+        "description": "Unapprove a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_unlink_plan_from_template": {
+        "area": "core_competency",
+        "description": "Unlink a learning plan from a template",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_update_competency": {
+        "area": "core_competency",
+        "description": "Update a competency",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_update_competency_framework": {
+        "area": "core_competency",
+        "description": "Update a competency framework",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_update_course_competency_settings": {
+        "area": "core_competency",
+        "description": "Update the course competency settings",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_update_plan": {
+        "area": "core_competency",
+        "description": "Update a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_update_template": {
+        "area": "core_competency",
+        "description": "Update a template",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_user_competency_cancel_review_request": {
+        "area": "core_competency",
+        "description": "Cancel the review request of a user's competency",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_user_competency_plan_viewed": {
+        "area": "core_competency",
+        "description": "Report the archive of user's competency as being viewed",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_user_competency_request_review": {
+        "area": "core_competency",
+        "description": "Request the review of a user's competency",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_user_competency_start_review": {
+        "area": "core_competency",
+        "description": "Start the review of a user's competency",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_user_competency_stop_review": {
+        "area": "core_competency",
+        "description": "Stop the review of a user's competency",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_user_competency_viewed": {
+        "area": "core_competency",
+        "description": "Report a user's competency as being viewed",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_user_competency_viewed_in_course": {
+        "area": "core_competency",
+        "description": "Report a user's competency as being viewed from a course",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_competency_user_competency_viewed_in_plan": {
+        "area": "core_competency",
+        "description": "Report a user's competency as being viewed from a learning plan",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_completion_get_activities_completion_status": {
+        "area": "core_completion",
+        "description": "Return the activities completion status for a user in a course.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_completion_get_course_completion_status": {
+        "area": "core_completion",
+        "description": "Returns course completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_completion_mark_course_self_completed": {
+        "area": "core_completion",
+        "description": "Update the course completion status for the current user (if course self-completion is enabled).",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_completion_override_activity_completion_status": {
+        "area": "core_completion",
+        "description": "Update completion status for a user in an activity by overriding it.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_completion_update_activity_completion_status_manually": {
+        "area": "core_completion",
+        "description": "Update completion status for the current user in an activity, only for activities with manual tracking.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_contentbank_delete_content": {
+        "area": "core_contentbank\\delete_content",
+        "description": "Delete a content from the content bank.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_contentbank_rename_content": {
+        "area": "core_contentbank\\rename_content",
+        "description": "Rename a content in the content bank.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_contentbank_set_content_visibility": {
+        "area": "core_contentbank\\set_content_visibility",
+        "description": "Set the visibility of a content in the content bank.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_add_content_item_to_user_favourites": {
+        "area": "core_course",
+        "description": "Adds a content item (activity, resource or their subtypes) to the favourites for the user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_check_updates": {
+        "area": "core_course",
+        "description": "Check if there is updates affecting the user for the given course and contexts.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_create_categories": {
+        "area": "core_course",
+        "description": "create categories",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_create_courses": {
+        "area": "core_course",
+        "description": "Create new courses",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_delete_categories": {
+        "area": "core_course",
+        "description": "delete categories",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_delete_courses": {
+        "area": "core_course",
+        "description": "delete courses",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_delete_modules": {
+        "area": "core_course",
+        "description": "Deletes all specified module instances",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_duplicate_course": {
+        "area": "core_course",
+        "description": "duplicate a course",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_edit_module": {
+        "area": "core_course",
+        "description": "Performs an action on course module (change visibility, duplicate, delete, etc.)",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_edit_section": {
+        "area": "core_course",
+        "description": "Performs an action on course section (change visibility, set marker, delete)",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_activities_overview": {
+        "area": "core_course",
+        "description": "Return activities overview for the given courses.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_activity_chooser_footer": {
+        "area": "core_course",
+        "description": "Fetch the data for the activity chooser footer.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_categories": {
+        "area": "core_course",
+        "description": "get categories",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_contents": {
+        "area": "core_course",
+        "description": "get course content (modules + web service file urls)",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_course_content_items": {
+        "area": "core_course",
+        "description": "Fetch all the content items (activities, resources and their subtypes) for the activity picker",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_course_module": {
+        "area": "core_course",
+        "description": "Return information about a course module.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_course_module_by_instance": {
+        "area": "core_course",
+        "description": "Return information about a given module name and instance id.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_courses": {
+        "area": "core_course",
+        "description": "Return course details",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_courses_by_field": {
+        "area": "core_course",
+        "description": "Get courses matching a specific field (id/s, shortname, idnumber, category)",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_enrolled_courses_by_timeline_classification": {
+        "area": "core_course",
+        "description": "List of enrolled courses for the given timeline classification (past, inprogress, or future).",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_enrolled_users_by_cmid": {
+        "area": "core_course",
+        "description": "List users by course module id & filter by group id.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_module": {
+        "area": "core_course",
+        "description": "Returns html with one activity module on course page",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_recent_courses": {
+        "area": "core_course",
+        "description": "List of courses a user has accessed most recently.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_updates_since": {
+        "area": "core_course",
+        "description": "Check if there are updates affecting the user for the given course since the given time stamp.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_user_administration_options": {
+        "area": "core_course",
+        "description": "Return a list of administration options in a set of courses that are avaialable or not for the current user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_get_user_navigation_options": {
+        "area": "core_course",
+        "description": "Return a list of navigation options in a set of courses that are avaialable or not for the current user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_import_course": {
+        "area": "core_course",
+        "description": "Import course data from a course into another course. Does not include any user data.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_remove_content_item_from_user_favourites": {
+        "area": "core_course",
+        "description": "Removes a content item (activity, resource or their subtypes) from the favourites for the user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_search_courses": {
+        "area": "core_course",
+        "description": "Search courses by (name, module, block, tag).",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_set_favourite_courses": {
+        "area": "core_course",
+        "description": "Add a list of courses to the list of favourite courses.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_toggle_activity_recommendation": {
+        "area": "core_course",
+        "description": "Adds or removes an activity as a recommendation in the activity chooser.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_update_categories": {
+        "area": "core_course",
+        "description": "update categories",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_update_courses": {
+        "area": "core_course",
+        "description": "Update courses.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_course_view_course": {
+        "area": "core_course",
+        "description": "Log that the course was viewed",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_customfield_create_category": {
+        "area": "core_customfield",
+        "description": "Creates a new category",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_customfield_delete_category": {
+        "area": "core_customfield",
+        "description": "Deletes a category",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_customfield_delete_field": {
+        "area": "core_customfield",
+        "description": "Deletes an entry",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_customfield_move_category": {
+        "area": "core_customfield",
+        "description": "Drag and drop categories",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_customfield_move_field": {
+        "area": "core_customfield",
+        "description": "Drag and drop",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_customfield_reload_template": {
+        "area": "core_customfield",
+        "description": "Reloads template",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_enrol_edit_user_enrolment": {
+        "area": "core_enrol",
+        "description": "External function that updates a given user enrolment",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_enrol_get_course_enrolment_methods": {
+        "area": "core_enrol",
+        "description": "Get the list of course enrolment methods",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_enrol_get_enrolled_users": {
+        "area": "core_enrol",
+        "description": "Get enrolled users by course id",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_enrol_get_enrolled_users_with_capability": {
+        "area": "core_enrol",
+        "description": "For each course and capability specified, return a list of the users that are enrolled in the course and have that capability",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_enrol_get_potential_users": {
+        "area": "core_enrol",
+        "description": "Get the list of potential users to enrol",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_enrol_get_users_courses": {
+        "area": "core_enrol",
+        "description": "get list of course ids that a user is enrolled in (if you are allowed to see that)",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_enrol_search_users": {
+        "area": "core_enrol",
+        "description": "Search within the list of course participants",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_enrol_submit_user_enrolment_form": {
+        "area": "core_enrol",
+        "description": "Submit form data for enrolment form",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_enrol_unenrol_user_enrolment": {
+        "area": "core_enrol",
+        "description": "External function that unenrols a given user enrolment",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_fetch_notifications": {
+        "area": "core_fetch",
+        "description": "Return a list of notifications for the current session",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_files_get_files": {
+        "area": "core_files",
+        "description": "browse moodle files",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_files_upload": {
+        "area": "core_files",
+        "description": "upload a file to moodle",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_files_delete_draft_files": {
+        "area": "core_files\\delete\\draft",
+        "description": "Delete the indicated files (or directories) from a user draft file area.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_files_get_unused_draft_itemid": {
+        "area": "core_files\\get\\unused_draft",
+        "description": "Generate a new draft itemid for the current user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_filters_get_available_in_context": {
+        "area": "core_filters",
+        "description": "Returns the filters available in the given contexts.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_form_get_filetypes_browser_data": {
+        "area": "core_form",
+        "description": "Provides data for the filetypes element browser.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_form_dynamic_form": {
+        "area": "core_form\\dynamic_form",
+        "description": "Process submission of a dynamic (modal) form",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_get_component_strings": {
+        "area": "core_get",
+        "description": "Return all raw strings (with {$a->xxx}) for a specific component - similar to core get_component_strings() call",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_get_fragment": {
+        "area": "core_get",
+        "description": "Return a fragment for inclusion, such as a JavaScript page.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_get_string": {
+        "area": "core_get",
+        "description": "Return a translated string - similar to core get_string() call",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_get_strings": {
+        "area": "core_get",
+        "description": "Return some translated strings - like several core get_string() calls",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_get_user_dates": {
+        "area": "core_get",
+        "description": "Return formatted timestamps",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_grade_update_grades": {
+        "area": "core_grade",
+        "description": "Update a grade item and associated student grades.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_grades_create_gradecategory": {
+        "area": "core_grades",
+        "description": "Create a grade category inside a course gradebook.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_grades_get_grades": {
+        "area": "core_grades",
+        "description": "Returns student course total grade and grades for activities. This function does not return category or manual items. This function is suitable for managers or teachers not students.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_grades_grader_gradingpanel_point_fetch": {
+        "area": "core_grades",
+        "description": "Fetch the data required to display the grader grading panel for simple grading, creating the grade item if required",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_grades_grader_gradingpanel_point_store": {
+        "area": "core_grades",
+        "description": "Store the data required to display the grader grading panel for simple grading",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_grades_grader_gradingpanel_scale_fetch": {
+        "area": "core_grades",
+        "description": "Fetch the data required to display the grader grading panel for scale-based grading, creating the grade item if required",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_grades_grader_gradingpanel_scale_store": {
+        "area": "core_grades",
+        "description": "Store the data required to display the grader grading panel for scale-based grading",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_grades_create_gradecategories": {
+        "area": "core_grades\\create_gradecategories",
+        "description": "Create grade categories inside a course gradebook.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_grading_get_definitions": {
+        "area": "core_grading",
+        "description": "Returns grading definitions for the course module ids and areaname provided as parameters. An optionall activeonly parameter can be provided so that only the active grading method is returned.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_grading_get_gradingform_instances": {
+        "area": "core_grading",
+        "description": "Returns the instances and fillings for the requested definition id. An optional since parameter allows the number of records returned to be reduced so that only those with a timemodified value >= since are returned",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_grading_save_definitions": {
+        "area": "core_grading",
+        "description": "Accepts an array of areas as a parameter. The areas contain grading definitions with criteria for inserting and updating",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_add_group_members": {
+        "area": "core_group",
+        "description": "Adds group members",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_assign_grouping": {
+        "area": "core_group",
+        "description": "assign groups from groupings",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_create_groupings": {
+        "area": "core_group",
+        "description": "create groupings",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_create_groups": {
+        "area": "core_group",
+        "description": "Creates new groups",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_delete_group_members": {
+        "area": "core_group",
+        "description": "Deletes group members",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_delete_groupings": {
+        "area": "core_group",
+        "description": "delete groupings",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_delete_groups": {
+        "area": "core_group",
+        "description": "Deletes all specified groups",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_get_activity_allowed_groups": {
+        "area": "core_group",
+        "description": "Gets a list of groups that the user is allowed to access within the specified activity.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_get_activity_groupmode": {
+        "area": "core_group",
+        "description": "Returns effective groupmode used in a given activity.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_get_course_groupings": {
+        "area": "core_group",
+        "description": "get all groupings in specified course",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_get_course_groups": {
+        "area": "core_group",
+        "description": "Returns all groups in specified course",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_get_course_user_groups": {
+        "area": "core_group",
+        "description": "Returns all groups in specified course for the specified user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_get_group_members": {
+        "area": "core_group",
+        "description": "Returns group members",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_get_groupings": {
+        "area": "core_group",
+        "description": "get groupings",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_get_groups": {
+        "area": "core_group",
+        "description": "Returns group details.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_unassign_grouping": {
+        "area": "core_group",
+        "description": "unassign groups from groupings",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_update_groupings": {
+        "area": "core_group",
+        "description": "update groupings",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_group_update_groups": {
+        "area": "core_group",
+        "description": "Updates existing groups.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_h5p_get_trusted_h5p_file": {
+        "area": "core_h5p",
+        "description": "Get the H5P file cleaned for Mobile App.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_block_contacts": {
+        "area": "core_message",
+        "description": "Block contacts",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_block_user": {
+        "area": "core_message",
+        "description": "Blocks a user",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_confirm_contact_request": {
+        "area": "core_message",
+        "description": "Confirms a contact request",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_create_contact_request": {
+        "area": "core_message",
+        "description": "Creates a contact request",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_create_contacts": {
+        "area": "core_message",
+        "description": "Add contacts to the contact list",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_data_for_messagearea_contacts": {
+        "area": "core_message",
+        "description": "Retrieve the template data for the contact list",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_data_for_messagearea_conversations": {
+        "area": "core_message",
+        "description": "Retrieve the template data for the conversation list",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_data_for_messagearea_get_most_recent_message": {
+        "area": "core_message",
+        "description": "Retrieve the template data for the most recent message",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_data_for_messagearea_get_profile": {
+        "area": "core_message",
+        "description": "Retrieve the template data for the users\\'s profile",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_data_for_messagearea_messages": {
+        "area": "core_message",
+        "description": "Retrieve the template data for the messages",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_data_for_messagearea_search_messages": {
+        "area": "core_message",
+        "description": "Retrieve the template data for searching for messages",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_data_for_messagearea_search_users": {
+        "area": "core_message",
+        "description": "Retrieve the template data for searching for people",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_data_for_messagearea_search_users_in_course": {
+        "area": "core_message",
+        "description": "Retrieve the template data for searching for people in a course",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_decline_contact_request": {
+        "area": "core_message",
+        "description": "Declines a contact request",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_delete_contacts": {
+        "area": "core_message",
+        "description": "Remove contacts from the contact list",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_delete_conversation": {
+        "area": "core_message",
+        "description": "Deletes a conversation.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_delete_conversations_by_id": {
+        "area": "core_message",
+        "description": "Deletes a list of conversations.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_delete_message": {
+        "area": "core_message",
+        "description": "Deletes a message.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_delete_message_for_all_users": {
+        "area": "core_message",
+        "description": "Deletes a message for all users.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_blocked_users": {
+        "area": "core_message",
+        "description": "Retrieve a list of users blocked",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_contact_requests": {
+        "area": "core_message",
+        "description": "Returns contact requests for a user",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_contacts": {
+        "area": "core_message",
+        "description": "Retrieve the contact list",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_conversation": {
+        "area": "core_message",
+        "description": "Retrieve a conversation for a user",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_conversation_between_users": {
+        "area": "core_message",
+        "description": "Retrieve a conversation for a user between another user",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_conversation_counts": {
+        "area": "core_message",
+        "description": "Retrieve a list of conversation counts, indexed by type.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_conversation_members": {
+        "area": "core_message",
+        "description": "Retrieve a list of members in a conversation",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_conversation_messages": {
+        "area": "core_message",
+        "description": "Retrieve the conversation messages and relevant member information",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_conversations": {
+        "area": "core_message",
+        "description": "Retrieve a list of conversations for a user",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_member_info": {
+        "area": "core_message",
+        "description": "Retrieve a user message profiles",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_message_processor": {
+        "area": "core_message",
+        "description": "Get a message processor",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_messages": {
+        "area": "core_message",
+        "description": "Retrieve a list of messages sent and received by a user (conversations, notifications or both)",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_received_contact_requests_count": {
+        "area": "core_message",
+        "description": "Gets the number of received contact requests",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_self_conversation": {
+        "area": "core_message",
+        "description": "Retrieve a self-conversation for a user",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_unread_conversations_count": {
+        "area": "core_message",
+        "description": "Retrieve the count of unread conversations for a given user",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_user_contacts": {
+        "area": "core_message",
+        "description": "Retrieve the contact list",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_user_message_preferences": {
+        "area": "core_message",
+        "description": "Get the message preferences for a given user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_get_user_notification_preferences": {
+        "area": "core_message",
+        "description": "Get the notification preferences for a given user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_mark_all_conversation_messages_as_read": {
+        "area": "core_message",
+        "description": "Mark all conversation messages as read for a given user",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_mark_all_messages_as_read": {
+        "area": "core_message",
+        "description": "Mark all messages as read for a given user",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_mark_all_notifications_as_read": {
+        "area": "core_message",
+        "description": "Mark all notifications as read for a given user",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_mark_message_read": {
+        "area": "core_message",
+        "description": "Mark a single message as read, trigger message_viewed event.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_mark_notification_read": {
+        "area": "core_message",
+        "description": "Mark a single notification as read, trigger notification_viewed event.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_message_processor_config_form": {
+        "area": "core_message",
+        "description": "Process the message processor config form",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_message_search_users": {
+        "area": "core_message",
+        "description": "Retrieve the data for searching for people",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_mute_conversations": {
+        "area": "core_message",
+        "description": "Mutes a list of conversations",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_search_contacts": {
+        "area": "core_message",
+        "description": "Search for contacts",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_send_instant_messages": {
+        "area": "core_message",
+        "description": "Send instant messages",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_send_messages_to_conversation": {
+        "area": "core_message",
+        "description": "Send messages to an existing conversation between users",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_set_favourite_conversations": {
+        "area": "core_message",
+        "description": "Mark a conversation or group of conversations as favourites/starred conversations.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_unblock_contacts": {
+        "area": "core_message",
+        "description": "Unblock contacts",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_unblock_user": {
+        "area": "core_message",
+        "description": "Unblocks a user",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_unmute_conversations": {
+        "area": "core_message",
+        "description": "Unmutes a list of conversations",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_message_unset_favourite_conversations": {
+        "area": "core_message",
+        "description": "Unset a conversation or group of conversations as favourites/starred conversations.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_notes_create_notes": {
+        "area": "core_notes",
+        "description": "Create notes",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_notes_delete_notes": {
+        "area": "core_notes",
+        "description": "Delete Notes",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_notes_get_course_notes": {
+        "area": "core_notes",
+        "description": "Returns all notes in specified course (or site) for the specified user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_notes_get_notes": {
+        "area": "core_notes",
+        "description": "Retrieve Notes",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_notes_update_notes": {
+        "area": "core_notes",
+        "description": "Update Notes",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_notes_view_notes": {
+        "area": "core_notes",
+        "description": "Simulates the web interface view of notes/index.php: trigger events.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_output_load_fontawesome_icon_map": {
+        "area": "core_output",
+        "description": "Load the mapping of names to icons",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_output_load_template": {
+        "area": "core_output",
+        "description": "Load a template for a renderable",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_payment_get_available_gateways": {
+        "area": "core_payment\\get_available_gateways",
+        "description": "Get the list of payment gateways that support the given component/area",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_question_get_random_question_summaries": {
+        "area": "core_question",
+        "description": "Get the random question set for a criteria",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_question_submit_tags_form": {
+        "area": "core_question",
+        "description": "Update the question tags.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_question_update_flag": {
+        "area": "core_question",
+        "description": "Update the flag state of a question attempt.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_rating_add_rating": {
+        "area": "core_rating",
+        "description": "Rates an item.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_rating_get_item_ratings": {
+        "area": "core_rating",
+        "description": "Retrieve all the ratings for an item.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_role_assign_roles": {
+        "area": "core_role",
+        "description": "Manual role assignments",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_role_unassign_roles": {
+        "area": "core_role",
+        "description": "Manual role unassignments",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_search_get_relevant_users": {
+        "area": "core_search",
+        "description": "Gets relevant users for a search request.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_session_time_remaining": {
+        "area": "core_session",
+        "description": "Count the seconds remaining in this session",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_session_touch": {
+        "area": "core_session",
+        "description": "Keep the users session alive",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_table_get_dynamic_table_content": {
+        "area": "core_table\\dynamic\\get",
+        "description": "Get the dynamic table content raw html",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_tag_get_tag_areas": {
+        "area": "core_tag",
+        "description": "Retrieves existing tag areas.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_tag_get_tag_cloud": {
+        "area": "core_tag",
+        "description": "Retrieves a tag cloud for the given collection and/or query search.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_tag_get_tag_collections": {
+        "area": "core_tag",
+        "description": "Retrieves existing tag collections.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_tag_get_tagindex": {
+        "area": "core_tag",
+        "description": "Gets tag index page for one tag and one tag area",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_tag_get_tagindex_per_area": {
+        "area": "core_tag",
+        "description": "Gets tag index page per different areas.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_tag_get_tags": {
+        "area": "core_tag",
+        "description": "Gets tags by their ids",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_tag_update_tags": {
+        "area": "core_tag",
+        "description": "Updates tags",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_update_inplace_editable": {
+        "area": "core_update",
+        "description": "Generic service to update title",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_add_user_device": {
+        "area": "core_user",
+        "description": "Store mobile user devices information for PUSH Notifications.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_add_user_private_files": {
+        "area": "core_user",
+        "description": "Copy files from a draft area to users private files area.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_agree_site_policy": {
+        "area": "core_user",
+        "description": "Agree the site policy for the current user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_create_users": {
+        "area": "core_user",
+        "description": "Create users - admin function",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_delete_users": {
+        "area": "core_user",
+        "description": "Delete users - admin function",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_get_course_user_profiles": {
+        "area": "core_user",
+        "description": "Get course user profiles by id",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_get_private_files_info": {
+        "area": "core_user",
+        "description": "Returns general information about files in the user private files area.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_get_user_preferences": {
+        "area": "core_user",
+        "description": "Return user preferences.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_get_users": {
+        "area": "core_user",
+        "description": "Search users. - If you want to get multiple users for one specific field, use core_user_get_users_by_field(), it's designed for this purpose and it should be faster.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_get_users_by_field": {
+        "area": "core_user",
+        "description": "Retrieve users information for a specified unique field - If you want to do a user search, use core_user_get_users()",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_get_users_by_id": {
+        "area": "core_user",
+        "description": "Get users by id",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_remove_user_device": {
+        "area": "core_user",
+        "description": "Remove a user device from the Moodle database.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_set_user_preferences": {
+        "area": "core_user",
+        "description": "Set user preferences.",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_update_picture": {
+        "area": "core_user",
+        "description": "Update or delete the user picture in the site",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_update_user_preferences": {
+        "area": "core_user",
+        "description": "Update a user\\'s preferences",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_update_users": {
+        "area": "core_user",
+        "description": "Update users",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_view_user_list": {
+        "area": "core_user",
+        "description": "Simulates the web-interface view of user/index.php (triggering events).",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_user_view_user_profile": {
+        "area": "core_user",
+        "description": "Simulates the web-interface view of user/view.php and user/profile.php (triggering events).",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_webservice_get_site_info": {
+        "area": "core_webservice",
+        "description": "Return some site info / user info / list web service functions",
+        "parameters": {},
+        "returns": {}
+    },
+    "core_xapi_statement_post": {
+        "area": "core_xapi\\post_statement",
+        "description": "Post an xAPI statement.",
+        "parameters": {},
+        "returns": {}
+    },
+    "enrol_guest_get_instance_info": {
+        "area": "enrol_guest",
+        "description": "Return guest enrolment instance information.",
+        "parameters": {},
+        "returns": {}
+    },
+    "enrol_manual_enrol_users": {
+        "area": "enrol_manual",
+        "description": "Manual enrol users",
+        "parameters": {},
+        "returns": {}
+    },
+    "enrol_manual_unenrol_users": {
+        "area": "enrol_manual",
+        "description": "Manual unenrol users",
+        "parameters": {},
+        "returns": {}
+    },
+    "enrol_self_enrol_user": {
+        "area": "enrol_self",
+        "description": "Self enrol the current user in the given course.",
+        "parameters": {},
+        "returns": {}
+    },
+    "enrol_self_get_instance_info": {
+        "area": "enrol_self",
+        "description": "self enrolment instance information.",
+        "parameters": {},
+        "returns": {}
+    },
+    "gradereport_overview_get_course_grades": {
+        "area": "gradereport_overview",
+        "description": "Get the given user courses final grades",
+        "parameters": {},
+        "returns": {}
+    },
+    "gradereport_overview_view_grade_report": {
+        "area": "gradereport_overview",
+        "description": "Trigger the report view event",
+        "parameters": {},
+        "returns": {}
+    },
+    "gradereport_user_get_grade_items": {
+        "area": "gradereport_user",
+        "description": "Returns the complete list of grade items for users in a course",
+        "parameters": {},
+        "returns": {}
+    },
+    "gradereport_user_get_grades_table": {
+        "area": "gradereport_user",
+        "description": "Get the user/s report grades table for a course",
+        "parameters": {},
+        "returns": {}
+    },
+    "gradereport_user_view_grade_report": {
+        "area": "gradereport_user",
+        "description": "Trigger the grade_report_viewed event when a user view his grade report (this web service will be initially used by the mobile app so information can be logged in the Moodle side when a user see the same page in the app).",
+        "parameters": {},
+        "returns": {}
+    },
+    "gradingform_guide_grader_gradingpanel_fetch": {
+        "area": "gradingform_guide",
+        "description": "Fetch the data required to display the grader grading panel, creating the grade item if required",
+        "parameters": {},
+        "returns": {}
+    },
+    "gradingform_guide_grader_gradingpanel_store": {
+        "area": "gradingform_guide",
+        "description": "Store the grading data for a user from the grader grading panel.",
+        "parameters": {},
+        "returns": {}
+    },
+    "gradingform_rubric_grader_gradingpanel_fetch": {
+        "area": "gradingform_rubric",
+        "description": "Fetch the data required to display the grader grading panel, creating the grade item if required",
+        "parameters": {},
+        "returns": {}
+    },
+    "gradingform_rubric_grader_gradingpanel_store": {
+        "area": "gradingform_rubric",
+        "description": "Store the grading data for a user from the grader grading panel.",
+        "parameters": {},
+        "returns": {}
+    },
+    "local_mobile_get_plugin_settings": {
+        "area": "local_mobile",
+        "description": "Retrieve the plugin settings.",
+        "parameters": {},
+        "returns": {}
+    },
+    "message_airnotifier_are_notification_preferences_configured": {
+        "area": "message_airnotifier",
+        "description": "Check if the users have notification preferences configured yet",
+        "parameters": {},
+        "returns": {}
+    },
+    "message_airnotifier_enable_device": {
+        "area": "message_airnotifier",
+        "description": "Enables or disables a registered user device so it can receive Push notifications",
+        "parameters": {},
+        "returns": {}
+    },
+    "message_airnotifier_get_user_devices": {
+        "area": "message_airnotifier",
+        "description": "Return the list of mobile devices that are registered in Moodle for the given user",
+        "parameters": {},
+        "returns": {}
+    },
+    "message_airnotifier_is_system_configured": {
+        "area": "message_airnotifier",
+        "description": "Check whether the airnotifier settings have been configured",
+        "parameters": {},
+        "returns": {}
+    },
+    "message_popup_get_popup_notifications": {
+        "area": "message_popup",
+        "description": "Retrieve a list of popup notifications for a user",
+        "parameters": {},
+        "returns": {}
+    },
+    "message_popup_get_unread_popup_notification_count": {
+        "area": "message_popup",
+        "description": "Retrieve the count of unread popup notifications for a given user",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_copy_previous_attempt": {
+        "area": "mod_assign",
+        "description": "Copy a students previous attempt to a new attempt.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_get_assignments": {
+        "area": "mod_assign",
+        "description": "Returns the courses and assignments for the users capability",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_get_grades": {
+        "area": "mod_assign",
+        "description": "Returns grades from the assignment",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_get_participant": {
+        "area": "mod_assign",
+        "description": "Get a participant for an assignment, with some summary info about their submissions.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_get_submission_status": {
+        "area": "mod_assign",
+        "description": "Returns information about an assignment submission status for a given user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_get_submissions": {
+        "area": "mod_assign",
+        "description": "Returns the submissions for assignments",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_get_user_flags": {
+        "area": "mod_assign",
+        "description": "Returns the user_flags for assignments",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_get_user_mappings": {
+        "area": "mod_assign",
+        "description": "Returns the user_mappings for assignments",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_list_participants": {
+        "area": "mod_assign",
+        "description": "List the participants for a single assignment, with some summary info about their submissions.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_lock_submissions": {
+        "area": "mod_assign",
+        "description": "Prevent students from making changes to a list of submissions",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_reveal_identities": {
+        "area": "mod_assign",
+        "description": "Reveal the identities for a blind marking assignment",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_revert_submissions_to_draft": {
+        "area": "mod_assign",
+        "description": "Reverts the list of submissions to draft status",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_save_grade": {
+        "area": "mod_assign",
+        "description": "Save a grade update for a single student.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_save_grades": {
+        "area": "mod_assign",
+        "description": "Save grade updates for one or more students.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_save_submission": {
+        "area": "mod_assign",
+        "description": "Update the current students submission",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_save_user_extensions": {
+        "area": "mod_assign",
+        "description": "Save a list of assignment extensions",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_set_user_flags": {
+        "area": "mod_assign",
+        "description": "Sets the specified user_flags for an assignment",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_submit_for_grading": {
+        "area": "mod_assign",
+        "description": "Submit the current students assignment for grading",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_submit_grading_form": {
+        "area": "mod_assign",
+        "description": "Submit the grading form data via ajax",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_unlock_submissions": {
+        "area": "mod_assign",
+        "description": "Allow students to make changes to a list of submissions",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_view_assign": {
+        "area": "mod_assign",
+        "description": "Update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_view_grading_table": {
+        "area": "mod_assign",
+        "description": "Trigger the grading_table_viewed event.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_assign_view_submission_status": {
+        "area": "mod_assign",
+        "description": "Trigger the submission status viewed event.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_book_get_books_by_courses": {
+        "area": "mod_book",
+        "description": "Returns a list of book instances in a provided set of courses.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_book_view_book": {
+        "area": "mod_book",
+        "description": "Trigger the course module viewed event and update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_chat_get_chat_latest_messages": {
+        "area": "mod_chat",
+        "description": "Get the latest messages from the given chat sessio.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_chat_get_chat_users": {
+        "area": "mod_chat",
+        "description": "Get the list of users in the given chat session.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_chat_get_chats_by_courses": {
+        "area": "mod_chat",
+        "description": "Returns a list of chat instances in a provided set of courses.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_chat_get_session_messages": {
+        "area": "mod_chat",
+        "description": "Retrieves messages of the given chat session.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_chat_get_sessions": {
+        "area": "mod_chat",
+        "description": "Retrieves chat sessions for a given chat.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_chat_login_user": {
+        "area": "mod_chat",
+        "description": "Log a user into a chat room in the given chat.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_chat_send_chat_message": {
+        "area": "mod_chat",
+        "description": "Send a message on the given chat session.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_chat_view_chat": {
+        "area": "mod_chat",
+        "description": "Trigger the course module viewed event and update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_choice_delete_choice_responses": {
+        "area": "mod_choice",
+        "description": "Delete the given submitted responses in a choice.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_choice_get_choice_options": {
+        "area": "mod_choice",
+        "description": "Retrieve options for a specific choice.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_choice_get_choice_results": {
+        "area": "mod_choice",
+        "description": "Retrieve users results for a given choice.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_choice_get_choices_by_courses": {
+        "area": "mod_choice",
+        "description": "Returns a list of choice instances in a provided set of courses.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_choice_submit_choice_response": {
+        "area": "mod_choice",
+        "description": "Submit responses to a specific choice item.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_choice_view_choice": {
+        "area": "mod_choice",
+        "description": "Trigger the course module viewed event and update the module completion status..",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_data_add_entry": {
+        "area": "mod_data",
+        "description": "Adds a new entry.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_data_approve_entry": {
+        "area": "mod_data",
+        "description": "Approves or unapproves an entry.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_data_delete_entry": {
+        "area": "mod_data",
+        "description": "Deletes an entry.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_data_get_data_access_information": {
+        "area": "mod_data",
+        "description": "Return access information for a given database.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_data_get_databases_by_courses": {
+        "area": "mod_data",
+        "description": "Returns a list of database instances in a provided set of courses, if no courses are provided then all the database instances the user has access to will be returned.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_data_get_entries": {
+        "area": "mod_data",
+        "description": "Return the complete list of entries of the given database.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_data_get_entry": {
+        "area": "mod_data",
+        "description": "Return one entry record from the database, including contents optionally.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_data_get_fields": {
+        "area": "mod_data",
+        "description": "Return the list of configured fields for the given database.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_data_search_entries": {
+        "area": "mod_data",
+        "description": "Search for entries in the given database.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_data_update_entry": {
+        "area": "mod_data",
+        "description": "Updates an existing entry.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_data_view_database": {
+        "area": "mod_data",
+        "description": "Simulate the view.php web interface data: trigger events, completion, etc...",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_feedback_get_analysis": {
+        "area": "mod_feedback",
+        "description": "Retrieves the feedback analysis.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_feedback_get_current_completed_tmp": {
+        "area": "mod_feedback",
+        "description": "Returns the temporary completion record for the current user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_feedback_get_feedback_access_information": {
+        "area": "mod_feedback",
+        "description": "Return access information for a given feedback.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_feedback_get_feedbacks_by_courses": {
+        "area": "mod_feedback",
+        "description": "Returns a list of feedbacks in a provided list of courses, if no list is provided all feedbacks that the user can view will be returned.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_feedback_get_finished_responses": {
+        "area": "mod_feedback",
+        "description": "Retrieves responses from the last finished attempt.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_feedback_get_items": {
+        "area": "mod_feedback",
+        "description": "Returns the items (questions) in the given feedback.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_feedback_get_last_completed": {
+        "area": "mod_feedback",
+        "description": "Retrieves the last completion record for the current user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_feedback_get_non_respondents": {
+        "area": "mod_feedback",
+        "description": "Retrieves a list of students who didn\\'t submit the feedback.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_feedback_get_page_items": {
+        "area": "mod_feedback",
+        "description": "Get a single feedback page items.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_feedback_get_responses_analysis": {
+        "area": "mod_feedback",
+        "description": "Return the feedback user responses analysis.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_feedback_get_unfinished_responses": {
+        "area": "mod_feedback",
+        "description": "Retrieves responses from the current unfinished attempt.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_feedback_launch_feedback": {
+        "area": "mod_feedback",
+        "description": "Starts or continues a feedback submission.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_feedback_process_page": {
+        "area": "mod_feedback",
+        "description": "Process a jump between pages.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_feedback_view_feedback": {
+        "area": "mod_feedback",
+        "description": "Trigger the course module viewed event and update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_folder_get_folders_by_courses": {
+        "area": "mod_folder",
+        "description": "Returns a list of folders in a provided list of courses, if no list is provided all folders that the user can view will be returned. Please note that this WS is not returning the folder contents.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_folder_view_folder": {
+        "area": "mod_folder",
+        "description": "Trigger the course module viewed event and update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_add_discussion": {
+        "area": "mod_forum",
+        "description": "Add a new discussion into an existing forum.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_add_discussion_post": {
+        "area": "mod_forum",
+        "description": "Create new posts into an existing discussion.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_can_add_discussion": {
+        "area": "mod_forum",
+        "description": "Check if the current user can add discussions in the given forum (and optionally for the given group).",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_delete_post": {
+        "area": "mod_forum",
+        "description": "Deletes a post or a discussion completely when the post is the discussion topic.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_get_discussion_post": {
+        "area": "mod_forum",
+        "description": "Get a particular discussion post.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_get_discussion_posts": {
+        "area": "mod_forum",
+        "description": "Returns a list of forum posts for a discussion.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_get_discussion_posts_by_userid": {
+        "area": "mod_forum",
+        "description": "Returns a list of forum posts for a discussion for a user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_get_forum_access_information": {
+        "area": "mod_forum",
+        "description": "Return capabilities information for a given forum.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_get_forum_discussion_posts": {
+        "area": "mod_forum",
+        "description": "Returns a list of forum posts for a discussion.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_get_forum_discussions": {
+        "area": "mod_forum",
+        "description": "Returns a list of forum discussions optionally sorted and paginated.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_get_forum_discussions_paginated": {
+        "area": "mod_forum",
+        "description": "Returns a list of forum discussions optionally sorted and paginated.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_get_forums_by_courses": {
+        "area": "mod_forum",
+        "description": "Returns a list of forum instances in a provided set of courses, if no courses are provided then all the forum instances the user has access to will be returned.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_prepare_draft_area_for_post": {
+        "area": "mod_forum",
+        "description": "Prepares a draft area for editing a post.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_set_lock_state": {
+        "area": "mod_forum",
+        "description": "Set the lock state for the discussion",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_set_pin_state": {
+        "area": "mod_forum",
+        "description": "Set the pin state",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_set_subscription_state": {
+        "area": "mod_forum",
+        "description": "Set the subscription state",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_toggle_favourite_state": {
+        "area": "mod_forum",
+        "description": "Toggle the favourite state",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_update_discussion_post": {
+        "area": "mod_forum",
+        "description": "Updates a post or a discussion topic post.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_view_forum": {
+        "area": "mod_forum",
+        "description": "Trigger the course_module_viewed event when a user view a forum (this web service will be initially used by the mobile app so information can be logged in the Moodle side when a user see the same page in the app).",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_forum_view_forum_discussion": {
+        "area": "mod_forum",
+        "description": "Trigger the discussion_viewed event when a user view a forum discussion (this web service will be initially used by the mobile app so information can be logged in the Moodle side when a user see the same page in the app).",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_glossary_add_entry": {
+        "area": "mod_glossary",
+        "description": "Add a new entry to a given glossary",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_glossary_get_authors": {
+        "area": "mod_glossary",
+        "description": "Get the authors in a glossary",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_glossary_get_categories": {
+        "area": "mod_glossary",
+        "description": "Get a glossary's categories",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_glossary_get_entries_by_author": {
+        "area": "mod_glossary",
+        "description": "Get entries using author filtering",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_glossary_get_entries_by_author_id": {
+        "area": "mod_glossary",
+        "description": "Get entries using author ID filtering",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_glossary_get_entries_by_category": {
+        "area": "mod_glossary",
+        "description": "Get entries using category filtering",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_glossary_get_entries_by_date": {
+        "area": "mod_glossary",
+        "description": "Get entries using date filtering",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_glossary_get_entries_by_letter": {
+        "area": "mod_glossary",
+        "description": "Get entries using letter filtering",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_glossary_get_entries_by_search": {
+        "area": "mod_glossary",
+        "description": "Get entries matching a search query",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_glossary_get_entries_by_term": {
+        "area": "mod_glossary",
+        "description": "Get entries using term filtering",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_glossary_get_entries_to_approve": {
+        "area": "mod_glossary",
+        "description": "Get entries to be approved",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_glossary_get_entry_by_id": {
+        "area": "mod_glossary",
+        "description": "Get an entry by ID",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_glossary_get_glossaries_by_courses": {
+        "area": "mod_glossary",
+        "description": "Get the glossaries in courses",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_glossary_view_entry": {
+        "area": "mod_glossary",
+        "description": "Notify that a glossary entry was viewed",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_glossary_view_glossary": {
+        "area": "mod_glossary",
+        "description": "Notify that a glossary was viewed",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_imscp_get_imscps_by_courses": {
+        "area": "mod_imscp",
+        "description": "Returns a list of imscp instances in a provided set of courses.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_imscp_view_imscp": {
+        "area": "mod_imscp",
+        "description": "Trigger the course module viewed event and update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_label_get_labels_by_courses": {
+        "area": "mod_label",
+        "description": "Returns a list of labels in a provided list of courses, if no list is provided all labels that the user can view will be returned.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_finish_attempt": {
+        "area": "mod_lesson",
+        "description": "Finishes the current attempt.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_get_attempts_overview": {
+        "area": "mod_lesson",
+        "description": "Get a list of all the attempts made by users in a lesson.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_get_content_pages_viewed": {
+        "area": "mod_lesson",
+        "description": "Return the list of content pages viewed by a user during a lesson attempt.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_get_lesson": {
+        "area": "mod_lesson",
+        "description": "Return information of a given lesson.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_get_lesson_access_information": {
+        "area": "mod_lesson",
+        "description": "Return access information for a given lesson.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_get_lessons_by_courses": {
+        "area": "mod_lesson",
+        "description": "Returns a list of lessons in a provided list of courses, if no list is provided all lessons that the user can view will be returned.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_get_page_data": {
+        "area": "mod_lesson",
+        "description": "Return information of a given page, including its contents.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_get_pages": {
+        "area": "mod_lesson",
+        "description": "Return the list of pages in a lesson (based on the user permissions).",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_get_pages_possible_jumps": {
+        "area": "mod_lesson",
+        "description": "Return all the possible jumps for the pages in a given lesson.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_get_questions_attempts": {
+        "area": "mod_lesson",
+        "description": "Return the list of questions attempts in a given lesson.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_get_user_attempt": {
+        "area": "mod_lesson",
+        "description": "Return information about the given user attempt (including answers).",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_get_user_attempt_grade": {
+        "area": "mod_lesson",
+        "description": "Return grade information in the attempt for a given user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_get_user_grade": {
+        "area": "mod_lesson",
+        "description": "Return the final grade in the lesson for the given user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_get_user_timers": {
+        "area": "mod_lesson",
+        "description": "Return the timers in the current lesson for the given user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_launch_attempt": {
+        "area": "mod_lesson",
+        "description": "Starts a new attempt or continues an existing one.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_process_page": {
+        "area": "mod_lesson",
+        "description": "Processes page responses.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lesson_view_lesson": {
+        "area": "mod_lesson",
+        "description": "Trigger the course module viewed event and update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lti_create_tool_proxy": {
+        "area": "mod_lti",
+        "description": "Create a tool proxy",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lti_create_tool_type": {
+        "area": "mod_lti",
+        "description": "Create a tool type",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lti_delete_tool_proxy": {
+        "area": "mod_lti",
+        "description": "Delete a tool proxy",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lti_delete_tool_type": {
+        "area": "mod_lti",
+        "description": "Delete a tool type",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lti_get_ltis_by_courses": {
+        "area": "mod_lti",
+        "description": "Returns a list of lti instances in a provided set of courses.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lti_get_tool_launch_data": {
+        "area": "mod_lti",
+        "description": "Return the launch data for a given external tool.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lti_get_tool_proxies": {
+        "area": "mod_lti",
+        "description": "Get a list of the tool proxies",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lti_get_tool_proxy_registration_request": {
+        "area": "mod_lti",
+        "description": "Get a registration request for a tool proxy",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lti_get_tool_types": {
+        "area": "mod_lti",
+        "description": "Get a list of the tool types",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lti_is_cartridge": {
+        "area": "mod_lti",
+        "description": "Determine if the given url is for a cartridge",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lti_update_tool_type": {
+        "area": "mod_lti",
+        "description": "Update a tool type",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_lti_view_lti": {
+        "area": "mod_lti",
+        "description": "Trigger the course module viewed event and update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_page_get_pages_by_courses": {
+        "area": "mod_page",
+        "description": "Returns a list of pages in a provided list of courses, if no list is provided all pages that the user can view will be returned.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_page_view_page": {
+        "area": "mod_page",
+        "description": "Trigger the course module viewed event and update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_get_attempt_access_information": {
+        "area": "mod_quiz",
+        "description": "Return access information for a given attempt in a quiz.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_get_attempt_data": {
+        "area": "mod_quiz",
+        "description": "Returns information for the given attempt page for a quiz attempt in progress.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_get_attempt_review": {
+        "area": "mod_quiz",
+        "description": "Returns review information for the given finished attempt, can be used by users or teachers.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_get_attempt_summary": {
+        "area": "mod_quiz",
+        "description": "Returns a summary of a quiz attempt before it is submitted.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_get_combined_review_options": {
+        "area": "mod_quiz",
+        "description": "Combines the review options from a number of different quiz attempts.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_get_quiz_access_information": {
+        "area": "mod_quiz",
+        "description": "Return access information for a given quiz.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_get_quiz_feedback_for_grade": {
+        "area": "mod_quiz",
+        "description": "Get the feedback text that should be show to a student who got the given grade in the given quiz.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_get_quiz_required_qtypes": {
+        "area": "mod_quiz",
+        "description": "Return the potential question types that would be required for a given quiz.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_get_quizzes_by_courses": {
+        "area": "mod_quiz",
+        "description": "Returns a list of quizzes in a provided list of courses, if no list is provided all quizzes that the user can view will be returned.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_get_user_attempts": {
+        "area": "mod_quiz",
+        "description": "Return a list of attempts for the given quiz and user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_get_user_best_grade": {
+        "area": "mod_quiz",
+        "description": "Get the best current grade for the given user on a quiz.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_process_attempt": {
+        "area": "mod_quiz",
+        "description": "Process responses during an attempt at a quiz and also deals with attempts finishing.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_save_attempt": {
+        "area": "mod_quiz",
+        "description": "Processes save requests during the quiz.This function is intended for the quiz auto-save feature.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_start_attempt": {
+        "area": "mod_quiz",
+        "description": "Starts a new attempt at a quiz.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_view_attempt": {
+        "area": "mod_quiz",
+        "description": "Trigger the attempt viewed event.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_view_attempt_review": {
+        "area": "mod_quiz",
+        "description": "Trigger the attempt reviewed event.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_view_attempt_summary": {
+        "area": "mod_quiz",
+        "description": "Trigger the attempt summary viewed event.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_quiz_view_quiz": {
+        "area": "mod_quiz",
+        "description": "Trigger the course module viewed event and update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_resource_get_resources_by_courses": {
+        "area": "mod_resource",
+        "description": "Returns a list of files in a provided list of courses, if no list is provided all files that the user can view will be returned.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_resource_view_resource": {
+        "area": "mod_resource",
+        "description": "Trigger the course module viewed event and update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_scorm_get_scorm_access_information": {
+        "area": "mod_scorm",
+        "description": "Return capabilities information for a given scorm.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_scorm_get_scorm_attempt_count": {
+        "area": "mod_scorm",
+        "description": "Return the number of attempts done by a user in the given SCORM.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_scorm_get_scorm_sco_tracks": {
+        "area": "mod_scorm",
+        "description": "Retrieves SCO tracking data for the given user id and attempt number.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_scorm_get_scorm_scoes": {
+        "area": "mod_scorm",
+        "description": "Returns a list containing all the scoes data related to the given scorm id.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_scorm_get_scorm_user_data": {
+        "area": "mod_scorm",
+        "description": "Retrieves user tracking and SCO data and default SCORM values.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_scorm_get_scorms_by_courses": {
+        "area": "mod_scorm",
+        "description": "Returns a list of scorm instances in a provided set of courses.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_scorm_insert_scorm_tracks": {
+        "area": "mod_scorm",
+        "description": "Saves a scorm tracking record.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_scorm_launch_sco": {
+        "area": "mod_scorm",
+        "description": "Trigger the SCO launched event.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_scorm_view_scorm": {
+        "area": "mod_scorm",
+        "description": "Trigger the course module viewed event and update the module completion status..",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_survey_get_questions": {
+        "area": "mod_survey",
+        "description": "Get the complete list of questions for the survey, including subquestions.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_survey_get_surveys_by_courses": {
+        "area": "mod_survey",
+        "description": "Returns a list of survey instances in a provided set of courses, if no courses are provided then all the survey instances the user has access to will be returned.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_survey_submit_answers": {
+        "area": "mod_survey",
+        "description": "Submit the answers for a given survey.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_survey_view_survey": {
+        "area": "mod_survey",
+        "description": "Trigger the course module viewed event and update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_url_get_urls_by_courses": {
+        "area": "mod_url",
+        "description": "Returns a list of urls in a provided list of courses, if no list is provided all urls that the user can view will be returned.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_url_view_url": {
+        "area": "mod_url",
+        "description": "Trigger the course module viewed event and update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_wiki_edit_page": {
+        "area": "mod_wiki",
+        "description": "Save the contents of a page.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_wiki_get_page_contents": {
+        "area": "mod_wiki",
+        "description": "Returns the contents of a page.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_wiki_get_page_for_editing": {
+        "area": "mod_wiki",
+        "description": "Locks and retrieves info of page-section to be edited.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_wiki_get_subwiki_files": {
+        "area": "mod_wiki",
+        "description": "Returns the list of files for a specific subwiki.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_wiki_get_subwiki_pages": {
+        "area": "mod_wiki",
+        "description": "Returns the list of pages for a specific subwiki.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_wiki_get_subwikis": {
+        "area": "mod_wiki",
+        "description": "Returns the list of subwikis the user can see in a specific wiki.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_wiki_get_wikis_by_courses": {
+        "area": "mod_wiki",
+        "description": "Returns a list of wiki instances in a provided set of courses, if no courses are provided then all the wiki instances the user has access to will be returned.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_wiki_new_page": {
+        "area": "mod_wiki",
+        "description": "Create a new page in a subwiki.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_wiki_view_page": {
+        "area": "mod_wiki",
+        "description": "Trigger the page viewed event and update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_wiki_view_wiki": {
+        "area": "mod_wiki",
+        "description": "Trigger the course module viewed event and update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_add_submission": {
+        "area": "mod_workshop",
+        "description": "Add a new submission to a given workshop.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_delete_submission": {
+        "area": "mod_workshop",
+        "description": "Deletes the given submission.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_evaluate_assessment": {
+        "area": "mod_workshop",
+        "description": "Evaluates an assessment (used by teachers for provide feedback to the reviewer).",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_evaluate_submission": {
+        "area": "mod_workshop",
+        "description": "Evaluates a submission (used by teachers for provide feedback or override the submission grade).",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_get_assessment": {
+        "area": "mod_workshop",
+        "description": "Retrieves the given assessment.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_get_assessment_form_definition": {
+        "area": "mod_workshop",
+        "description": "Retrieves the assessment form definition.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_get_grades": {
+        "area": "mod_workshop",
+        "description": "Returns the assessment and submission grade for the given user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_get_grades_report": {
+        "area": "mod_workshop",
+        "description": "Retrieves the assessment grades report.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_get_reviewer_assessments": {
+        "area": "mod_workshop",
+        "description": "Retrieves all the assessments reviewed by the given user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_get_submission": {
+        "area": "mod_workshop",
+        "description": "Retrieves the given submission.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_get_submission_assessments": {
+        "area": "mod_workshop",
+        "description": "Retrieves all the assessments of the given submission.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_get_submissions": {
+        "area": "mod_workshop",
+        "description": "Retrieves all the workshop submissions or the one done by the given user (except example submissions).",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_get_user_plan": {
+        "area": "mod_workshop",
+        "description": "Return the planner information for the given user.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_get_workshop_access_information": {
+        "area": "mod_workshop",
+        "description": "Return access information for a given workshop.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_get_workshops_by_courses": {
+        "area": "mod_workshop",
+        "description": "Returns a list of workshops in a provided list of courses, if no list is provided all workshops that the user can view will be returned.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_update_assessment": {
+        "area": "mod_workshop",
+        "description": "Add information to an allocated assessment.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_update_submission": {
+        "area": "mod_workshop",
+        "description": "Update the given submission.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_view_submission": {
+        "area": "mod_workshop",
+        "description": "Trigger the submission viewed event.",
+        "parameters": {},
+        "returns": {}
+    },
+    "mod_workshop_view_workshop": {
+        "area": "mod_workshop",
+        "description": "Trigger the course module viewed event and update the module completion status.",
+        "parameters": {},
+        "returns": {}
+    },
+    "report_competency_data_for_report": {
+        "area": "report_competency",
+        "description": "Load the data for the competency report in a course.",
+        "parameters": {},
+        "returns": {}
+    },
+    "report_insights_action_executed": {
+        "area": "report_insights",
+        "description": "Stores an action executed over a group of predictions.",
+        "parameters": {},
+        "returns": {}
+    },
+    "report_insights_set_fixed_prediction": {
+        "area": "report_insights",
+        "description": "Flags a prediction as fixed.",
+        "parameters": {},
+        "returns": {}
+    },
+    "report_insights_set_notuseful_prediction": {
+        "area": "report_insights",
+        "description": "Flags the prediction as not useful.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_analytics_potential_contexts": {
+        "area": "tool_analytics",
+        "description": "Retrieve the list of potential contexts for a model.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_data_for_competencies_manage_page": {
+        "area": "tool_lp",
+        "description": "Load the data for the competencies manage page template",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_data_for_competency_frameworks_manage_page": {
+        "area": "tool_lp",
+        "description": "Load the data for the competency frameworks manage page template",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_data_for_competency_summary": {
+        "area": "tool_lp",
+        "description": "Load competency data for summary template.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_data_for_course_competencies_page": {
+        "area": "tool_lp",
+        "description": "Load the data for the course competencies page template.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_data_for_plan_page": {
+        "area": "tool_lp",
+        "description": "Load the data for the plan page template.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_data_for_plans_page": {
+        "area": "tool_lp",
+        "description": "Load the data for the plans page template",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_data_for_related_competencies_section": {
+        "area": "tool_lp",
+        "description": "Load the data for the related competencies template.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_data_for_template_competencies_page": {
+        "area": "tool_lp",
+        "description": "Load the data for the template competencies page template.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_data_for_templates_manage_page": {
+        "area": "tool_lp",
+        "description": "Load the data for the learning plan templates manage page template",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_data_for_user_competency_summary": {
+        "area": "tool_lp",
+        "description": "Load a summary of a user competency.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_data_for_user_competency_summary_in_course": {
+        "area": "tool_lp",
+        "description": "Load a summary of a user competency.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_data_for_user_competency_summary_in_plan": {
+        "area": "tool_lp",
+        "description": "Load a summary of a user competency.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_data_for_user_evidence_list_page": {
+        "area": "tool_lp",
+        "description": "Load the data for the user evidence list page template",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_data_for_user_evidence_page": {
+        "area": "tool_lp",
+        "description": "Load the data for the user evidence page template",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_list_courses_using_competency": {
+        "area": "tool_lp",
+        "description": "List the courses using a competency",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_search_cohorts": {
+        "area": "tool_lp",
+        "description": "Search for cohorts.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_lp_search_users": {
+        "area": "tool_lp",
+        "description": "Search for users.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_mobile_call_external_functions": {
+        "area": "tool_mobile",
+        "description": "Call multiple external functions and return all responses.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_mobile_get_autologin_key": {
+        "area": "tool_mobile",
+        "description": "Creates an auto-login key for the current user. Is created only in https sites and is restricted by time and ip address.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_mobile_get_config": {
+        "area": "tool_mobile",
+        "description": "Returns a list of the site configurations, filtering by section.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_mobile_get_content": {
+        "area": "tool_mobile",
+        "description": "Returns a piece of content to be displayed in the Mobile app.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_mobile_get_plugins_supporting_mobile": {
+        "area": "tool_mobile",
+        "description": "Returns a list of Moodle plugins supporting the mobile app.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_mobile_get_public_config": {
+        "area": "tool_mobile",
+        "description": "Returns a list of the site public settings, those not requiring authentication.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_templatelibrary_list_templates": {
+        "area": "tool_templatelibrary",
+        "description": "List/search templates by component.",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_templatelibrary_load_canonical_template": {
+        "area": "tool_templatelibrary",
+        "description": "Load a canonical template by name (not the theme overidden one).",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_usertours_complete_tour": {
+        "area": "tool_usertours",
+        "description": "Mark the specified tour as completed for the current user",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_usertours_fetch_and_start_tour": {
+        "area": "tool_usertours",
+        "description": "Fetch the specified tour",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_usertours_reset_tour": {
+        "area": "tool_usertours",
+        "description": "Remove the specified tour",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_usertours_step_shown": {
+        "area": "tool_usertours",
+        "description": "Mark the specified step as completed for the current user",
+        "parameters": {},
+        "returns": {}
+    },
+    "tool_xmldb_invoke_move_action": {
+        "area": "tool_xmldb",
+        "description": "moves element up/down",
+        "parameters": {},
+        "returns": {}
+    }
+}
