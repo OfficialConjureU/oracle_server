@@ -1,57 +1,48 @@
-// =======================
-// ORACLE FINAL SERVER (AUTOMATED + FORMATTED)
-// =======================
+// ==========================
+// FINAL ORACLE MOODLE SERVER
+// ==========================
 
 const express = require('express');
 const axios = require('axios');
-const path = require('path');
 const qs = require('qs');
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Moodle Config
+// Moodle API config
 const MOODLE_URL = 'https://conjureuniversity.online/moodle/webservice/rest/server.php';
 const MOODLE_TOKEN = '519f754c7dc83533788a2dd5872fe991';
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
-// Static file support (optional)
-app.use('/.well-known', express.static(path.join(__dirname, '.well-known')));
-app.use(express.static(path.join(__dirname, 'public')));
+// ==========================
+// Root Route
+// ==========================
+app.get('/', (req, res) => {
+  res.send('Oracle Moodle Server: ACTIVE');
+});
 
-// =======================
-// Oracle Smart Command
-// =======================
-app.post('/oracle_command', async (req, res) => {
+// ==========================
+// Create User Direct
+// ==========================
+app.post('/create_user', async (req, res) => {
   try {
-    const { command, parameters } = req.body;
+    const user = req.body;
 
-    if (!command || typeof parameters !== 'object') {
-      return res.status(400).json({ error: 'Missing or invalid command/parameters.' });
-    }
-
+    // Flatten user fields to Moodle's required format
     const payload = {
       wstoken: MOODLE_TOKEN,
-      wsfunction: command,
-      moodlewsrestformat: 'json'
+      wsfunction: 'core_user_create_users',
+      moodlewsrestformat: 'json',
+      'users[0][username]': user.username,
+      'users[0][password]': user.password || 'Welcome2025!',
+      'users[0][firstname]': user.firstname,
+      'users[0][lastname]': user.lastname,
+      'users[0][email]': user.email,
+      'users[0][auth]': user.auth || 'manual',
+      'users[0][lang]': user.lang || 'en',
+      'users[0][timezone]': user.timezone || 'America/Chicago',
+      'users[0][maildisplay]': user.maildisplay ?? 1
     };
-
-    // Flatten parameters including nested like users[0][key]
-    for (const key in parameters) {
-      if (key.includes('[')) {
-        payload[key] = parameters[key];
-      } else if (typeof parameters[key] === 'object' && Array.isArray(parameters[key])) {
-        parameters[key].forEach((item, index) => {
-          for (const subkey in item) {
-            payload[`${key}[${index}][${subkey}]`] = item[subkey];
-          }
-        });
-      } else {
-        payload[key] = parameters[key];
-      }
-    }
 
     const response = await axios.post(
       MOODLE_URL,
@@ -61,14 +52,23 @@ app.post('/oracle_command', async (req, res) => {
       }
     );
 
-    res.json({ message: `Successfully executed ${command}.`, moodleResponse: response.data });
-
-  } catch (error) {
-    console.error('Oracle Command Error:', error.response?.data || error.message);
-    res.status(500).json({ error: error.response?.data || error.message });
+    res.json({
+      status: 'success',
+      message: `User ${user.firstname} ${user.lastname} created.`,
+      moodleResponse: response.data
+    });
+  } catch (err) {
+    console.error('Error creating user:', err.response?.data || err.message);
+    res.status(500).json({
+      status: 'error',
+      error: err.response?.data || err.message
+    });
   }
 });
 
+// ==========================
+// Start Server
+// ==========================
 app.listen(PORT, () => {
-  console.log(`Oracle Relay Server (Final) running on port ${PORT}`);
+  console.log(`Oracle Moodle Server running on port ${PORT}`);
 });
