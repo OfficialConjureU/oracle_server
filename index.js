@@ -7,6 +7,7 @@ const axios = require('axios');
 const qs = require('qs');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const parseInstruction = require('./oracle_instruction_parser');
 
 // Moodle API config
 const MOODLE_URL = 'https://conjureuniversity.online/moodle/webservice/rest/server.php';
@@ -62,6 +63,53 @@ app.post('/create_user', async (req, res) => {
     res.status(500).json({
       status: 'error',
       error: err.response?.data || err.message
+    });
+  }
+});
+// ==========================
+// Smart Oracle Instruction Endpoint
+// ==========================
+app.post('/oracle_command', async (req, res) => {
+  try {
+    const { command } = req.body;
+
+    if (!command || typeof command !== 'string') {
+      return res.status(400).json({ error: 'Missing or invalid command string.' });
+    }
+
+    const { wsfunction, parameters } = parseInstruction(command);
+
+    if (!wsfunction || !parameters) {
+      return res.status(400).json({ error: 'Unable to parse command into Moodle function.' });
+    }
+
+    const payload = {
+      wstoken: MOODLE_TOKEN,
+      wsfunction,
+      moodlewsrestformat: 'json',
+      ...parameters
+    };
+
+    const axiosConfig = {
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+    };
+
+    const moodleResponse = await axios.post(
+      MOODLE_URL,
+      qs.stringify(payload),
+      axiosConfig
+    );
+
+    res.json({
+      message: `Successfully executed ${wsfunction}.`,
+      moodleResponse: moodleResponse.data
+    });
+
+  } catch (err) {
+    console.error('Oracle command error:', err.message);
+    res.status(500).json({
+      error: 'Internal error processing command.',
+      details: err.message
     });
   }
 });
