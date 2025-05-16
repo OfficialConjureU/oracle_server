@@ -11,8 +11,9 @@ const MOODLE_URL = 'https://conjureuniversity.online/moodle/webservice/rest/serv
 const MOODLE_TOKEN = '519f754c7dc83533788a2dd5872fe991';
 const DOCS_URL = `https://conjureuniversity.online/moodle/admin/webservice/documentation.php?wstoken=${MOODLE_TOKEN}`;
 
-// Auto-update function map on startup
+// Auto-update function map
 let functionMap = {};
+
 async function updateFunctionMap() {
   try {
     const response = await axios.get(DOCS_URL);
@@ -33,9 +34,9 @@ async function updateFunctionMap() {
     });
     functionMap = map;
     fs.writeFileSync('./Moodle_Universal_Functions_Map.json', JSON.stringify(map, null, 2));
-    console.log('✅ Moodle function map auto-updated');
+    console.log('✅ [AutoSync] Moodle function map refreshed @', new Date().toLocaleString());
   } catch (err) {
-    console.error('❌ Failed to auto-update function map:', err.message);
+    console.error('❌ [AutoSync] Failed to refresh function map:', err.message);
     functionMap = JSON.parse(fs.readFileSync('./Moodle_Universal_Functions_Map.json', 'utf8'));
   }
 }
@@ -86,9 +87,12 @@ app.post('/oracle_command', async (req, res) => {
   }
 });
 
-// Launch server and update map
+// Launch server + sync on boot + refresh daily
 updateFunctionMap().then(() => {
   app.listen(PORT, () => {
     console.log(`✅ Oracle Moodle Relay running on port ${PORT}`);
   });
+
+  // Auto-refresh schema every 24 hours
+  setInterval(updateFunctionMap, 24 * 60 * 60 * 1000);
 });
