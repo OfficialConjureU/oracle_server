@@ -1,5 +1,5 @@
 // ==========================
-// FINAL ORACLE MOODLE SERVER
+// FINAL ORACLE MOODLE SERVER (AUTOMATED + FORM-ENCODED)
 // ==========================
 
 const express = require('express');
@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 });
 
 // ==========================
-// Universal Oracle Command Handler
+// Oracle Universal Command Handler
 // ==========================
 app.post('/oracle_command', async (req, res) => {
   try {
@@ -63,9 +63,6 @@ app.post('/oracle_command', async (req, res) => {
   }
 });
 
-// ==========================
-// Start Server
-// ==========================
 app.listen(PORT, () => {
   console.log(`Oracle Moodle Server running on port ${PORT}`);
 });
